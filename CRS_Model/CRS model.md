@@ -40,11 +40,21 @@
 - 此範例為一個具有兩項投入及三個產出的系統，內部的各製程均被視為黑盒子般，在此不被考量。
 
 <div align=center>
-<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/ex1.png" width="350" height="130">
- </div>
+<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/ex1.png" width="350" height="110">
+</div>
  
 - 共有五個決策單位要進行比較，其各自的產出項與投入項情形如下圖所示。
+
+<div align=center>
+<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/ex2.png" width="500" height="200">
+</div>
+
 - 並能形成如下所示的CRS Model
+
+<div align=center>
+<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/ex3.png" width="450" height="260">
+</div>
+
 ```python
 from gurobipy import*
 DMU=['A','B','C','D','E']
