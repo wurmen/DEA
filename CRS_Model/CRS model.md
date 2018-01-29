@@ -28,12 +28,13 @@
 - 目標式： 找出一組對於受評決策單位k最有利的投入項與產出項之權重，以最大化其效率值
 - 限制式： 效率值必須介於0到1之間，且各權重皆為正值
 
-<div align=center>
-<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs1.png"  width="250" height="250"/>
-</div>
+<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs1.png" width="450" height="250">
  
 ### 2. 原問題
-由於上述的數學模型為分數線性規劃(fractional linear programming)的形式，除了會發生多重解的情況外，求解也較不易，因此透過轉換，將其變成下列線性規劃的模式，以方便求解
+由於上述的數學模型為分數線性規劃(fractional linear programming)的形式，除了會發生多重解的情況外，求解也較不易，因此透過轉換，將其變成下列線性規劃的模式，以方便求解。
+
+<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs2.png" width="450" height="250">
+
 ## (一)範例說明
 此為一個具有兩項投入及三個產出的系統，內部的各製程被視為黑盒子般，在此不被考量。
 ```python
