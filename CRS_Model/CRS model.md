@@ -36,34 +36,37 @@
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs2.png" width="450" height="260">
 
 ## (二)範例說明
-**※在此以一個簡單的範例來建構上述的數學模型，並說明如何利用python-gurobi進行建模<br>**
+**※在此以一個簡單的範例來建構上述的數學模型，並說明如何利用Python-Gurobi進行建模<br>**
 - 此範例為一個具有兩項投入及三個產出的系統，內部的各製程均被視為黑盒子般，在此不被考量。
 
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/ex1.png" width="350" height="110">
 </div>
  
-- 共有五個決策單位要進行比較，其各自的產出項與投入項情形如下圖所示。
+- 共有五個決策單位要進行比較，其各自的產出項與投入項情形如下圖所示：
 
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/ex2.png" width="500" height="200">
 </div>
 
-- 並能形成如下所示的CRS Model
+- 並能形成如下所示的CRS Model：
 
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/ex3.png" width="450" height="260">
 </div>
+<br>
+
+## (三)Python-Gurobi
 
 ```python
 from gurobipy import*
+# 透過for loop來計算每個決策單位的效率
 DMU=['A','B','C','D','E']
 val={}
 for k in DMU:
-    
-    I=2
-    O=3
-    #X、Y為各DMU的產出與投入
+    I=2 # 兩項投入
+    O=3 # 三項產出
+    #X、Y為各DMU的產出與投入
     DMU,X,Y=multidict({('A'):[[11,14],[2,2,1]],('B'):[[7,7],[1,1,1]],('C'):[[11,14],[1,1,2]],('D'):[[14,14],[2,3,1]],('E'):[[14,15],[3,2,3]]})
     v={}
     u={}
