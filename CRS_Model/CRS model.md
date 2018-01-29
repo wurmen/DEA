@@ -6,6 +6,10 @@
 <br>
 [【回到首頁】](https://github.com/wurmen/DEA)
 <br>
+#### ※*Reference*
+*本篇範例資料取自高強教授於2007發表的Paper：[Efficiency decomposition in network data envelopment analysis: A relational model](https://www.sciencedirect.com/science/article/pii/S0377221707010077)*
+
+
 ## (一)CRS Model
 **※此為DEA中固定規模報酬(constant return to scale, CRS)的模型建構說明，並以投入導向的模組為例**<br>
 <br>
