@@ -31,12 +31,15 @@
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs1.png" width="450" height="250">
  
 ### 2. 原問題
-由於上述的數學模型為分數線性規劃(fractional linear programming)的形式，除了會發生多重解的情況外，求解也較不易，因此透過轉換，將其變成下列線性規劃的模式，以方便求解。
+由於上述的數學模型為分數線性規劃(fractional linear programming)形式，除了會發生多重解的情況外，求解也較不易，因此透過轉換，將其變成下列線性規劃的模式，以方便求解。
 
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs2.png" width="450" height="250">
 
-## (一)範例說明
-此為一個具有兩項投入及三個產出的系統，內部的各製程被視為黑盒子般，在此不被考量。
+## (二)範例說明
+**※在此以一個簡單的範例來建構上述的數學模型，並說明如何利用python-gurobi進行建模<br>**
+- 此範例為一個具有兩項投入及三個產出的系統，內部的各製程均被視為黑盒子般，在此不被考量。
+- 共有五個決策單位要進行比較，其各自的產出項與投入項情形如下圖所示。
+- 並能形成如下所示的CRS Model
 ```python
 from gurobipy import*
 DMU=['A','B','C','D','E']
