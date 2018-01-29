@@ -5,8 +5,11 @@
 *2017/01/29*
 <br>
 [【回到首頁】](https://github.com/wurmen/DEA)
+<br>
+## (一)CRS Model說明
+此為固定規模報酬(constant return to scale,CRS)的模型建構說明
 ## (一)範例說明
-此為一個具有兩項投入及三個產出的系統，內部的各製程被視為黑盒子般，不被考量。
+此為一個具有兩項投入及三個產出的系統，內部的各製程被視為黑盒子般，在此不被考量。
 ```python
 from gurobipy import*
 DMU=['A','B','C','D','E']
