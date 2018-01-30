@@ -120,6 +120,7 @@ for k in DMU:
     print (h[k])
 ```
 **最後可得到如下所示的結果**
+從結果我們可知決策單位A、D、E與其他決策單位相比是相較有效率的，其效率值皆為1。
 ```
     The efficiency of DMU A:   1
     The efficiency of DMU B:0.898
