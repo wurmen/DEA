@@ -12,7 +12,7 @@
 
 ## (一)前言
 
-常見的DEA再進行效率衡量時，一般會將整個系統(System)視為一整體，並不探討內部各製程(Process)的狀況，但往往會忽略系統內部製程間的效率，就如在建置[CRS Model](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS%20model.md)所提出的範例般，而高強教授在本篇研究中建構了一個**關聯網絡DEA模型**(Relational network DEA model)，藉由該模型來探討系統內部各製程間的相互關係，並同時衡量系統效率及各製程的效率，通過引入虛擬製程(Dummy processes)，將原始網絡系統轉換為串聯系統，並使串聯中的每個階段都是並行結構，以達到效率分解的目的，透過效率分解，找出導致系統低效運行的製程，以便將來進行改進；**因此在此篇文章中主要是利用paper中的範例及所提出的數學模式來進行說明及建模**
+常見的DEA再進行效率衡量時，一般會將整個系統(System)視為一整體，並不探討內部各製程(Process)的狀況，但往往會忽略系統內部製程間的效率，就如在建置[CRS Model](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS%20model.md)所提出的範例般，而高強教授在本篇研究中建構了一個**關聯網絡DEA模型**(Relational network DEA model)，藉由該模型來探討系統內部各製程間的相互關係，並同時衡量系統效率及各製程的效率，通過引入虛擬製程(Dummy processes)，將原始網絡系統轉換為串聯系統，並使串聯中的每個階段都是並行結構，以達到效率分解的目的，透過效率分解，找出導致系統低效運行的製程，以便將來進行改進；**因此在此篇文章中主要是利用paper中的範例及所提出的數學模式來進行說明並利用Python-Gurobi進行建模**
 
 ## (二)範例說明
 #### ※在此利用paper中第三節所提出的範例進行說明
@@ -20,7 +20,7 @@
 ### § 範例系統架構
 
 - 下圖是一個由三個製程所形成的系統，該系統最初有兩項投入，最終會有三項產出，而系統內部各製程的投入與產出情形，如下圖所示：<br>
-1. 系統最初的兩項投入會分成三個部份分別給製程1、製程2、製程3當成他們各自的投入項。<br>
+1. 系統最初的兩項投入會被分成三個部份分別給製程1、製程2及製程3當成他們各自的投入項。<br>
 2. 製程1和製程2的產出會被分成兩個部份，一部份為最終系統產出，另一部份則當成製程3的部份投入項
 
 <div align=center>
@@ -73,9 +73,25 @@
 - u<sub>r</sup></sub>： 第r個產出項之權重 (在此例中r=1,2,3)
 - v<sub>i</sup></sub>： 第i個投入項之權重 (在此例中i=1,2)
 
+### § 目標式及限制式
 
+此數學模型即為高教授所提出的關聯網絡DEA模型<br>
 
+※此模型是基於CRS Model所延伸(詳請可參閱[原文](https://www.sciencedirect.com/science/article/pii/S0377221707010077))
 
+<img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/model1.png" width="550" height="250">
+
+### § 各製程之效率
+
+求解完後，可透過下列的數學式來計算各製程的個別效率值
+
+<img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/model2.png" width="450" height="120">
+
+### § 各製程之效率
+
+求解完後，可利用下列的數學式來計算各階段的效率值
+
+<img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/model3.png" width="450" height="115">
 
 
 
