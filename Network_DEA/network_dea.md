@@ -54,14 +54,14 @@
 ### § 符號說明
 
 - E<sub>k</sup></sub>： 決策單位k的效率值
-- n： 決策單位(DMU)個數<br>
-- ε： 極小的正值稱之為非阿基米德數(non-Archimedean constant)，通常設為E-4或E-6(目的為了使任一投入或產出項皆不會被忽略)
+- n： 決策單位(DMU)個數 (在此例中n=5)<br>
+- ε： 極小的正值稱之為非阿基米德數(non-Archimedean constant)，通常設為10<sup>-4</sup></sub>或10<sup>-6</sup></sub>(目的為了使任一投入或產出項皆不會被忽略)
 
 ### § 參數說明
 
-- X<sub>ij</sup></sub>： 決策單位j (j=1,...,n)的整體系統中，最初的第i (i=1,...,m)個投入項
+- X<sub>ij</sup></sub>： 決策單位j (j=1,...,n)的整體系統中，最初的第i (i=1,...,m)個投入項 (在此例中m=2)
 
-- X<sup>(t)</sup></sub><sub>ij</sup></sub>： 決策單位j (j=1,...,n)在製程t的第i個投入項
+- X<sup>(t)</sup></sub><sub>ij</sup></sub>： 決策單位j (j=1,...,n)在製程t的第i個投入項 (在此例中t=1,2,3、i=1,2)
 
 - Y<sup>(O)</sup></sub><sub>1j</sup></sub>、Y<sup>(I)</sup></sub><sub>1j</sup></sub>： 決策單位j (j=1,...,n)製程1的產出項，Y<sup>(O)</sup></sub><sub>1j</sup></sub>為最終的系統產出，Y<sup>(I)</sup></sub><sub>1j</sup></sub>會成為製程3的部份投入項
 
@@ -69,7 +69,9 @@
 
 - Y<sub>ij</sup></sub>： 決策單位j (j=1,...,n)在製程i的總產出
 
-
+### § 決策變數
+- u<sub>r</sup></sub>： 第r個產出項之權重 (在此例中r=1,2,3)
+- v<sub>i</sup></sub>： 第i個投入項之權重 (在此例中i=1,2)
 
 
 
