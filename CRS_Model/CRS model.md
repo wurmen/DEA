@@ -28,13 +28,13 @@
 - u<sub>r</sup></sub>： 第r個產出項之權重
 - v<sub>i</sup></sub>： 第i個投入項之權重
 ### § CRS Model
-### 1. 比率型
+#### 1. 比率型
 - 目標式： 找出一組對於受評決策單位k最有利的投入項與產出項之權重，以最大化其效率值
 - 限制式： 效率值必須介於0到1之間，且各權重皆為正值
 
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs1.png" width="450" height="250">
  
-### 2. 原問題
+#### 2. 原問題
 由於上述的數學模型為分數線性規劃(fractional linear programming)形式，除了會發生多重解的情況外，求解也較不易，因此透過轉換，將其變成下列線性規劃的模式，以方便求解。
 
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs2.png" width="450" height="260">
@@ -61,12 +61,14 @@
 <br>
 
 ## (三)Python-Gurobi
+在此說明如何運用Python-Gurobi來建構CRS model
+##### ※完整程式碼可點擊[這裡](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS_code.py)
 
-## Import gurobipy
+### Import gurobipy
 ```python
 from gurobipy import*
 ```
-## Add parameters
+### Add parameters
 - 透過for loop來計算每個決策單位的效率
 ```python
 DMU=['A','B','C','D','E']
@@ -77,11 +79,11 @@ for k in DMU:
     #X、Y為各DMU的投入與產出情形
     DMU,X,Y=multidict({('A'):[[11,14],[2,2,1]],('B'):[[7,7],[1,1,1]],('C'):[[11,14],[1,1,2]],('D'):[[14,14],[2,3,1]],('E'):[[14,15],[3,2,3]]})
 ```
-## Model
+### Model
 ```python
     m=Model("CRS_System_DEA")
 ```
-## Add decision variables
+### Add decision variables
 - 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>r</sup></sub>
 ```python
     v={}
@@ -93,17 +95,17 @@ for k in DMU:
     for r in range(O):
         u[r]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%r,lb=0.0001)
 ```
-## Update
+### Update
 ```python
     m.update()
 ```
-## Add objective
+### Add objective
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs2-1.png" width="200" height="80">
 
 ```python
     m.setObjective(quicksum(u[r]*Y[k][r] for r in range(O)),GRB.MAXIMIZE)
 ```
-## Add constraints
+### Add constraints
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/crs2-2.png" width="275" height="125">
 
 ```python
@@ -111,7 +113,7 @@ for k in DMU:
     for j in DMU:
         m.addConstr(quicksum(u[r]*Y[j][r] for r in range(O))-quicksum(v[i]*X[j][i] for i in range(I))<=0)
 ```
-## Print result
+### Print result
 ```python
     m.optimize()
     h[k]="The efficiency of DMU %s:%4.3g"%(k,m.objVal)
