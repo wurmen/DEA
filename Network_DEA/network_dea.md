@@ -36,13 +36,14 @@
 <img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/network%20system1.png" width="750" height="350">
 </div>
 
-##### ※在第三節前本篇研究有提出兩個論點
+##### ※在第三節前本篇研究有提出兩個論點(推論過程可詳閱[原文](https://www.sciencedirect.com/science/article/pii/S0377221707010077))
 ###### 1. 在一個由串聯結構的製程所形成的系統中，各製程的效率乘積等於整體的效率值
 ###### 2. 在一個由並形結構的製程所成的系統中，各製程的低效率鬆弛(inefficiency slack)總和等於整體效率的低效率鬆弛
 ###### 因此在此系統中，整體系統效率值為串聯結構中每個階段效率的乘積，也就是階段1及階段2的效率乘積，而每個階段的低效率鬆弛為並聯結構中，各製程的低效率鬆弛總和，也就是階段1的低效率鬆弛為製程1及製程2都總和，階段2的低效率鬆弛則等於製程3的低效率鬆弛
 
 ### § 決策單位各項產出項與投入項數據
 
+- 共有五個決策單位要進行比較，其系統及各製程的產出與投入情形如下表所示：
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/example-data.PNG" width="800" height="370">
 </div>
@@ -51,11 +52,13 @@
 上述的系統可形成如下所示的數學模型
 
 ### § 符號說明
+
 - E<sub>k</sup></sub>： 決策單位k的效率值
 - n： 決策單位(DMU)個數<br>
 - ε： 極小的正值稱之為非阿基米德數(non-Archimedean constant)，通常設為E-4或E-6(目的為了使任一投入或產出項皆不會被忽略)
 
 ### § 參數說明
+
 - X<sub>ij</sup></sub>： 決策單位j (j=1,...,n)的整體系統中，最初的第i (i=1,...,m)個投入項
 
 - X<sup>(t)</sup></sub><sub>ij</sup></sub>： 決策單位j (j=1,...,n)在製程t的第i個投入項
