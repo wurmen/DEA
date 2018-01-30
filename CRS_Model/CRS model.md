@@ -7,7 +7,7 @@
 [【回到首頁】](https://github.com/wurmen/DEA)
 <br>
 #### ※*Reference*
-*本篇範例資料取自高強教授於2007發表的Paper：[Efficiency decomposition in network data envelopment analysis: A relational model](https://www.sciencedirect.com/science/article/pii/S0377221707010077)*
+*本篇範例資料取自[高強教授](http://www.iim.ncku.edu.tw/files/11-1407-20368.php?Lang=zh-tw)於2007發表的Paper：[Efficiency decomposition in network data envelopment analysis: A relational model](https://www.sciencedirect.com/science/article/pii/S0377221707010077)*
 
 
 ## (一)CRS Model
