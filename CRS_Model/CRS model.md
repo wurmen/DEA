@@ -41,7 +41,7 @@
 
 ## (二)範例說明
 **※在此以一個簡單的範例來建構上述的數學模型，並說明如何利用Python-Gurobi進行建模<br>**
-- 此範例為一個具有兩項投入及三個產出的系統，內部的各製程均被視為黑盒子般，在此不被考量。
+- 此範例為一個具有兩項投入及三項產出的系統，系統內部的各製程均被視為黑盒子般，在此不被考量。
 
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/pictures/ex1.png" width="350" height="110">
@@ -119,7 +119,7 @@ for k in DMU:
 for k in DMU:
     print (h[k])
 ```
-**最後可得到如下所示的結果**
+**最後可得到如下所示的結果**<br>
 從結果我們可知決策單位A、D、E與其他決策單位相比是相較有效率的，其效率值皆為1。
 ```
     The efficiency of DMU A:   1
