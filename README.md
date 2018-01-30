@@ -6,8 +6,8 @@
 #### § DEA Models
 |更新時間|文章|
 |---|---|
-|2018-01-30|[CRS Model](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS%20model.md)|
-
+|2018-01-29|[CRS Model](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS%20model.md)|
+|2018-01-30|[Network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
 
 --------
 ### 參考資源(Python-Gurobi)
