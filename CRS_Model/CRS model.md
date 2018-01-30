@@ -20,7 +20,7 @@
 - n： 決策單位(DMU)個數<br>
 - m： 投入項個數<br>
 - s： 產出項個數<br>
-- ε： 極小的正值稱之為非阿基米德數(non-Archimedean constant)，通常設為E-4或E-6(目的為了使任一投入或產出項皆不會被忽略)
+- ε： 極小的正值稱之為非阿基米德數(non-Archimedean constant)，通常設為10<sup>-4</sup></sub>或10<sup>-6</sup></sub>(目的為了使任一投入或產出項皆不會被忽略)
 ### § 參數說明
 - X<sub>ij</sup></sub>： 決策單位j (j=1,...,n)使用第i (i=1,...,m)個投入項
 - Y<sub>rj</sup></sub>： 決策單位j (j=1,...,n)使用第r (r=1,...,s)個產出項
