@@ -40,6 +40,7 @@
 ###### 1. 在一個由串聯結構的製程所形成的系統中，各製程的效率乘積等於整體的效率值
 ###### 2. 在一個由並行結構的製程所成的系統中，各製程的低效率鬆弛(inefficiency slack)總和等於整體效率的低效率鬆弛
 ###### 因此在此系統中，整體系統效率值為串聯結構中每個階段效率的乘積，也就是階段1及階段2的效率乘積，而每個階段的低效率鬆弛為並聯結構中，各製程的低效率鬆弛總和，也就是階段1的低效率鬆弛為製程1及製程2都總和，階段2的低效率鬆弛則等於製程3的低效率鬆弛
+<br>
 
 ### § 決策單位各項產出項與投入項數據
 
@@ -77,7 +78,7 @@
 
 此數學模型即為高教授所提出的關聯網絡DEA模型<br>
 
-※此模型是基於CRS Model所延伸(詳請可參閱[原文](https://www.sciencedirect.com/science/article/pii/S0377221707010077))
+※該模型是基於CRS Model所延伸(詳請可參閱[原文](https://www.sciencedirect.com/science/article/pii/S0377221707010077))
 
 <img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/model1.png" width="550" height="250">
 
@@ -91,7 +92,7 @@
 
 求解完後，可利用下列的數學式來計算各階段的效率值
 
-<img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/model3.png" width="470" height="110">
+<img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/model3.png" width="470" height="105">
 
 
 ## (三)Python-Gurobi
@@ -124,8 +125,7 @@ for k in DMU:
 ```python
     DMU,Totx1,Totx2=multidict({("A"):[11,14],("B"):[7,7],("C"):[11,14],("D"):[14,14],("E"):[14,15]})
 ```
-- 紀錄各製程產出與投入項數據
-以製程1為例:<br>
+- 紀錄各製程產出與投入項數據，以製程1為例:<br>
 proc1x1：紀錄製程1的第1個投入項數據<br>
 proc1x2：紀錄製程1的第2個投入項數據<br>
 proc1TotyO：紀錄製程1的總產出數據 (proc1TotyO= proc1yO+Proc1yI)<br>
@@ -152,8 +152,8 @@ Proc1yI：紀錄製程1總產出中將成為製程3投入項的數據<br>
     for i in range(I):
         v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i)
     
-    for i in range(O):
-        u[i]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%i)
+    for r in range(O):
+        u[r]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%i)
 ```
 ### Update
 ```python
@@ -195,7 +195,7 @@ Proc1yI：紀錄製程1總產出中將成為製程3投入項的數據<br>
     stage1=(u_sol[0]*proc1TotyO[k]+u_sol[1]*proc2TotyO[k]+v_sol[0]*proc3x1[k]+v_sol[1]*proc3x2[k])/(v_sol[0]*Totx1[k]+v_sol[1]*Totx2[k])
     stage2=(u_sol[0]*proc1yO[k]+u_sol[1]*proc2yO[k]+u_sol[2]*proc3TotyO[k])/(u_sol[0]*proc1TotyO[k]+u_sol[1]*proc2TotyO[k]+v_sol[0]*proc3x1[k]+v_sol[1]*proc3x2[k])
 ```
-- 紀錄每個決策單位的各製程即各階段的效率值
+- 紀錄每個決策單位的各製程及各階段的效率值
 ```python
     val_p1[k]='The efficiency of process 1 of DMU %s:%4.4g'%(k,E1)
     val_p2[k]='The efficiency of process 2 of DMU %s:%4.4g'%(k,E2)
