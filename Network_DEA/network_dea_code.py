@@ -1,14 +1,10 @@
 from gurobipy import*
 DMU=['A', 'B','C','D','E']
 E={}
-val_p1={}
-val_p2={}
-val_p3={}
-val_s1={}
-val_s2={}
-slack_p1={}
-slack_p2={}
-slack_p3={}
+val_p1, val_p2, val_p3 = {}, {}, {}
+val_s1, val_s2 = {}, {}
+slack_p1, slack_p2, slack_p3 = {}, {}, {}
+
 for k in DMU:
 
     I=2
@@ -18,11 +14,12 @@ for k in DMU:
     DMU,proc1x1,proc1x2,proc1TotyO,proc1yO,proc1yI=multidict({("A"):[3,5,4,2,2],("B"):[2,3,2,1,1],("C"):[3,4,2,1,1],("D"):[4,6,3,2,1],("E"):[5,6,4,3,1]})
     DMU,proc2x1,proc2x2,proc2TotyO,proc2yO,proc2yI=multidict({("A"):[4,3,3,2,1],("B"):[2,1,2,1,1],("C"):[5,3,2,1,1],("D"):[5,5,4,3,1],("E"):[5,4,4,2,2]})
     DMU,proc3x1,proc3x2,proc3TotyO=multidict({("A"):[4,6,1],("B"):[3,3,1],("C"):[3,7,2],("D"):[5,3,1],("E"):[4,5,3]})
-    P1={}
-    P2={}
-    P3={}
+   
+    P1, P2, P3 = {}, {}, {}
+    
     v={}
     u={}
+    
     m=Model("network_DEA")
     for i in range(I):
         v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i)
