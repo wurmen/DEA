@@ -86,9 +86,9 @@ for k in DMU:
 ### Add decision variables
 - 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>r</sup></sub>
 ```python
-    v={}
-    u={}
-    
+
+    v,u={},{}
+
     for i in range(I):
         v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i,lb=0.0001)
     
