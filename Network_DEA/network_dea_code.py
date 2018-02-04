@@ -1,14 +1,8 @@
 from gurobipy import*
 DMU=['A', 'B','C','D','E']
 E={}
-val_p1={}
-val_p2={}
-val_p3={}
-val_s1={}
-val_s2={}
-slack_p1={}
-slack_p2={}
-slack_p3={}
+val_p1,val_p2,val_p3,val_s1,val_s2={},{},{},{},{}
+slack_p1,slack_p2,slack_p3={},{},{}
 for k in DMU:
 
     I=2
