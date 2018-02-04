@@ -1,7 +1,7 @@
 from gurobipy import*
 DMU=['A','B','C','D','E']
-h={}
-for k in DMU:
+E={}
+for r in DMU:
     
     I=2
     O=3
@@ -15,19 +15,19 @@ for k in DMU:
     for i in range(I):
         v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i,lb=0.0001)
     
-    for r in range(O):
-        u[r]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%r,lb=0.0001)
+    for j in range(O):
+        u[j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%j,lb=0.0001)
     
     m.update()
     
-    m.setObjective(quicksum(u[r]*Y[k][r] for r in range(O)),GRB.MAXIMIZE)
+    m.setObjective(quicksum(u[j]*Y[r][j] for j in range(O)),GRB.MAXIMIZE)
         
-    m.addConstr(quicksum(v[i]*X[k][i] for i in range(I))==1)
-    for j in DMU:
-        m.addConstr(quicksum(u[r]*Y[j][r] for r in range(O))-quicksum(v[i]*X[j][i] for i in range(I))<=0)
+    m.addConstr(quicksum(v[i]*X[r][i] for i in range(I))==1)
+    for k in DMU:
+        m.addConstr(quicksum(u[j]*Y[k][j] for j in range(O))-quicksum(v[i]*X[k][i] for i in range(I))<=0)
     
     m.optimize()
-    h[k]="The efficiency of DMU %s:%4.3g"%(k,m.objVal)
+    E[r]="The efficiency of DMU %s:%4.3g"%(r,m.objVal)
     
-for k in DMU:
-    print (h[k])
+for r in DMU:
+    print (E[r])
