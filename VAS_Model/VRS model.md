@@ -1,4 +1,4 @@
-# CRS Model  
+# VRS Model(編輯中)  
 
 *POLab*
 <br>
@@ -11,7 +11,7 @@
 
 
 ## (一)CRS Model
-**※此為DEA中固定規模報酬(constant return to scale, CRS)的模型建構說明，並以投入導向的模組為例**<br>
+**※此為DEA中變動規模報酬(variable return to scale, VRS)的模型建構說明，並以投入導向的模組為例**<br>
 <br>
 固定規模報酬是指每一單位的投入可得到的產出量是固定的，並不會因為規模大小而改變，也就是說當投入量以等比例增加時，產出亦會以等比例增加，並在固定規模報酬的假設下，藉由將各決策單位(Decision Making Unit, DMU)的各項投入加權組合與各項產出加權組合互相比較計算其比值，以得出各個決策單位的效率值，且效率值介於0到1之間；投入導向指的是在相同產出水準下，比較各決策單位投入資源的使用效率。<br>
 
@@ -61,30 +61,29 @@
 <br>
 
 ## (三)Python-Gurobi
-在此說明如何運用Python-Gurobi來建構CRS model
-##### ※完整程式碼可點擊[這裡](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS_code.py)
+在此說明如何運用Python-Gurobi來建構VRS model
+##### ※完整程式碼可點擊[這裡](https://github.com/wurmen/DEA/blob/master/VAS_Model/VRS_code.py)
 
 ### Import gurobipy
 ```python
 from gurobipy import*
 ```
 ### Add parameters
-- 透過for loop來計算每個決策單位的效率
 ```python
-DMU=['A','B','C','D','E']
 E={}
-for r in DMU:
-    I=2  # 兩項投入
-    O=3  # 三項產出
-    #X、Y為各DMU的投入與產出情形
-    DMU,X,Y=multidict({('A'):[[11,14],[2,2,1]],('B'):[[7,7],[1,1,1]],('C'):[[11,14],[1,1,2]],('D'):[[14,14],[2,3,1]],('E'):[[14,15],[3,2,3]]})
+I=2  # 兩項投入
+O=3  # 三項產出
+#X、Y為各DMU的投入與產出情形
+DMU,X,Y=multidict({('A'):[[11,14],[2,2,1]],('B'):[[7,7],[1,1,1]],('C'):[[11,14],[1,1,2]],('D'):[[14,14],[2,3,1]],('E'):[[14,15],[3,2,3]]})
 ```
 ### Model
+- 透過for loop來計算每個決策單位的效率
 ```python
-    m=Model("CRS_System_DEA")
+for r in DMU:
+    m=Model("VRS_model")
 ```
 ### Add decision variables
-- 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>r</sup></sub>
+- 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>j</sup></sub>以及u<sub>o</sup></sub>
 ```python
 
     v,u={},{}
@@ -94,24 +93,25 @@ for r in DMU:
     
     for j in range(O):
         u[j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%j,lb=0.0001)
+    u0=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS)
 ```
 ### Update
 ```python
     m.update()
 ```
 ### Add objective
-<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/picture/crs2-1.png" width="200" height="80">
+<img src="" width="200" height="80">
 
 ```python
-    m.setObjective(quicksum(u[j]*Y[r][j] for j in range(O)),GRB.MAXIMIZE)
+    m.setObjective(quicksum(u[j]*Y[r][j] for j in range(O))-u0,GRB.MAXIMIZE)
 ```
 ### Add constraints
-<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/picture/crs2-2.png" width="275" height="125">
+<img src="" width="275" height="125">
 
 ```python
     m.addConstr(quicksum(v[i]*X[r][i] for i in range(I))==1)
     for k in DMU:
-        m.addConstr(quicksum(u[j]*Y[k][j] for j in range(O))-quicksum(v[i]*X[k][i] for i in range(I))<=0)
+        m.addConstr(quicksum(u[j]*Y[k][j] for j in range(O))-quicksum(v[i]*X[k][i] for i in range(I))-u0 <=0)
 ```
 ### Print result
 ```python
@@ -122,11 +122,10 @@ for r in DMU:
     print (E[r])
 ```
 **最後可得到如下所示的結果**<br>
-從結果我們可知決策單位A、D、E與其他決策單位相比是相較有效率的，其效率值皆為1。
 ```
     The efficiency of DMU A:   1
-    The efficiency of DMU B:0.898
-    The efficiency of DMU C:0.848
+    The efficiency of DMU B:   1
+    The efficiency of DMU C:0.955
     The efficiency of DMU D:   1
     The efficiency of DMU E:   1
 ```
