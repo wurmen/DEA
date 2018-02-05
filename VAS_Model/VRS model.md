@@ -2,7 +2,7 @@
 
 *POLab*
 <br>
-*2017/01/29*
+*2017/02/05*
 <br>
 [【回到首頁】](https://github.com/wurmen/DEA)
 <br>
@@ -10,10 +10,14 @@
 *本篇範例資料取自[高強教授](http://www.iim.ncku.edu.tw/files/11-1407-20368.php?Lang=zh-tw)於2007發表的Paper：[Efficiency decomposition in network data envelopment analysis: A relational model](https://www.sciencedirect.com/science/article/pii/S0377221707010077)*
 
 
-## (一)CRS Model
+## (一)VRS Model
 **※此為DEA中變動規模報酬(variable return to scale, VRS)的模型建構說明，並以投入導向的模組為例**<br>
 <br>
-固定規模報酬是指每一單位的投入可得到的產出量是固定的，並不會因為規模大小而改變，也就是說當投入量以等比例增加時，產出亦會以等比例增加，並在固定規模報酬的假設下，藉由將各決策單位(Decision Making Unit, DMU)的各項投入加權組合與各項產出加權組合互相比較計算其比值，以得出各個決策單位的效率值，且效率值介於0到1之間；投入導向指的是在相同產出水準下，比較各決策單位投入資源的使用效率。<br>
+在CRS模式中，假設每一單位的投入可得到的產出量是固定的，並不會因為規模大小而改變的固定規模報酬形式，但在現實生產過程中，可能會因為不同的生產規模，規模報酬也會跟著改變，因此Banker等人(1984)將CRS模式修正成VRS模式，在此假設下衡量各決策單位(Decision Making Unit, DMU)的相對效率，並同時評估決策單位是否達到有效的生產規模，故VRS模式可一併衡量**規模效率(scale efficiency)**與**技術效率(technical efficiency)**。<br>
+<br>
+CRS模式中所求得的效率值稱為總體效率值(overall efficiency)，而VRS模式所得的效率值為技術效率(technical efficiency)，藉由這兩者之比較可得到規模效率(scale efficiency)，因此得出以下公式:<br>
+<br>
+**<p align="center">總體效率值 = 技術效率X規模效率</p>** 
 
 ### § 符號說明
 - E<sub>r</sup></sub>： 決策單位r的效率值
