@@ -10,7 +10,7 @@ for r in DMU:
     
     v,u={},{}
 
-    m=Model("CRS_System_DEA")
+    m=Model("CRS_model")
     
     for i in range(I):
         v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i,lb=0.0001)
