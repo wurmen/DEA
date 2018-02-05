@@ -81,10 +81,10 @@ for r in DMU:
 ```
 ### Model
 ```python
-    m=Model("CRS_System_DEA")
+    m=Model("CRS_model")
 ```
 ### Add decision variables
-- 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>r</sup></sub>
+- 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>j</sup></sub>
 ```python
 
     v,u={},{}
