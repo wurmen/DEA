@@ -37,17 +37,17 @@ CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**�
 ### § 決策變數
 - u<sub>j</sup></sub>： 第j個產出項之權重
 - v<sub>i</sup></sub>： 第i個投入項之權重
-### § CRS Model
+### § VRS Model
 #### 1. 比率型
 - 目標式： 找出一組對於受評決策單位r最有利的投入項與產出項之權重，以最大化其效率值
 - 限制式： 效率值必須介於0到1之間，且各權重皆為正值
 
-<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/picture/crs1.png" width="450" height="250">
+<img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs1.png" width="450" height="250">
  
 #### 2. 原問題
 由於上述的數學模型為分數線性規劃(fractional linear programming)形式，除了會發生多重解的情況外，求解也較不易，因此透過轉換，將其變成下列線性規劃的模式，以方便求解。
 
-<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/picture/crs2.png" width="450" height="260">
+<img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs2.png" width="450" height="260">
 
 ## (二)範例說明
 **※在此以一個簡單的範例來建構上述的數學模型，並說明如何利用Python-Gurobi進行建模<br>**
@@ -110,13 +110,13 @@ for r in DMU:
     m.update()
 ```
 ### Add objective
-<img src="" width="200" height="80">
+<img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs2-1.png" width="200" height="80">
 
 ```python
     m.setObjective(quicksum(u[j]*Y[r][j] for j in range(O))-u0,GRB.MAXIMIZE)
 ```
 ### Add constraints
-<img src="" width="275" height="125">
+<img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs2-2.png" width="275" height="125">
 
 ```python
     m.addConstr(quicksum(v[i]*X[r][i] for i in range(I))==1)
