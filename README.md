@@ -1,5 +1,5 @@
 # Data-Envelopment-Analysis
-ad
+
 ### 內容概述
 在此主要透過一些範例來說明如何利用Python-Gurobi來建構資料包絡分析模組(Data-Envelopment-Analysis, DEA)
 
