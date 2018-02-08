@@ -12,23 +12,23 @@ for r in DMU:
     
     v,u={},{}
     for i in range(I):
-        v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i)
+        v[r,i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%s%d"%(r,i))
     
     for j in range(O):
-        u[j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%j)
-    u0=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS)
+        u[r,j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%s%d"%(r,j))
+    u[0,r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS)
     
     m.update()
     
-    m.setObjective(quicksum(u[j]*Y[r][j] for j in range(O))-u0,GRB.MAXIMIZE)
+    m.setObjective(quicksum(u[r,j]*Y[r][j] for j in range(O))-u[0,r],GRB.MAXIMIZE)
         
-    m.addConstr(quicksum(v[i]*X[r][i] for i in range(I))==1)
+    m.addConstr(quicksum(v[r,i]*X[r][i] for i in range(I))==1)
     for k in DMU:
-        m.addConstr(quicksum(u[j]*Y[k][j] for j in range(O))-quicksum(v[i]*X[k][i] for i in range(I))-u0 <=0)
+        m.addConstr(quicksum(u[r,j]*Y[k][j] for j in range(O))-quicksum(v[r,i]*X[k][i] for i in range(I))-u[0,r] <=0)
     
     m.optimize()
     
-    E[r]="The efficiency of DMU %s:%4.3g"%(r,m.objVal)
+    E[r]="The efficiency of DMU %s:%0.3g"%(r,m.objVal)
 
 for r in DMU:
     print (E[r])
