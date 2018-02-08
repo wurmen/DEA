@@ -13,20 +13,20 @@
 ## (一)CRS Model
 **※此為DEA中固定規模報酬(constant return to scale, CRS)的模型建構說明，並以投入導向的模組為例**<br>
 <br>
-固定規模報酬是指每一單位的投入可得到的產出量是固定的，並不會因為規模大小而改變，也就是說當投入量以等比例增加時，產出亦會以等比例增加，並在固定規模報酬的假設下，藉由將各決策單位(Decision Making Unit, DMU)的各項投入加權組合與各項產出加權組合互相比較計算其比值，以得出各個決策單位的相對效率值，且效率值介於0到1之間，而在CRS模式中所求得的效率值又稱之為**總體效率值(overall efficiency)**；投入導向指的是在相同產出水準下，比較各決策單位投入資源的使用效率。<br>
+固定規模報酬是指每一單位的投入可得到的產出量是固定的，並不會因為規模大小而改變，也就是說當投入量以等比例增加時，產出亦會以等比例增加，並在固定規模報酬的假設下，藉由將各決策單位(Decision Making Unit, DMU)的各項投入加權組合與各項產出加權組合互相比較計算其比值，以得出各個決策單位的相對效率值，且效率值介於0到1之間，而在CRS模式中所求得的效率值又稱之為**總體效率值(overall efficiency, OE)**；投入導向指的是在相同產出水準下，比較各決策單位投入資源的使用效率。<br>
 
 ### § 符號說明
-- E<sub>r</sup></sub>： 決策單位r的效率值
+- E<sub>r</sup></sub><sup>CRS</sup></sub>： 決策單位r的效率值
 - K： 決策單位(DMU)個數 r,k∈K <br>
 - I： 投入項個數 i∈I <br>
 - J： 產出項個數 j∈J <br>
 - ε： 極小的正值稱之為非阿基米德數(non-Archimedean constant)，通常設為10<sup>-4</sup></sub>或10<sup>-6</sup></sub>(目的為了使任一投入或產出項皆不會被忽略)
 ### § 參數說明
-- X<sub>ik</sup></sub>： 決策單位k (k=1,...,K)使用第i (i=1,...,I)個投入項
-- Y<sub>jk</sup></sub>： 決策單位k (k=1,...,K)使用第j (j=1,...,J)個產出項
+- X<sub>ki</sup></sub>： 決策單位k (k=1,...,K)使用第i (i=1,...,I)個投入項
+- Y<sub>kj</sup></sub>： 決策單位k (k=1,...,K)使用第j (j=1,...,J)個產出項
 ### § 決策變數
-- u<sub>j</sup></sub>： 第j個產出項之權重
-- v<sub>i</sup></sub>： 第i個投入項之權重
+- u<sub>rj</sup></sub>： 決策單位r的第j個產出項之權重
+- v<sub>ri</sup></sub>： 決策單位r的第i個投入項之權重
 ### § CRS Model
 #### 1. 比率型
 - 目標式： 找出一組對於受評決策單位r最有利的投入項與產出項之權重，以最大化其效率值
@@ -69,31 +69,31 @@
 from gurobipy import*
 ```
 ### Add parameters
-- 透過for loop來計算每個決策單位的效率
+
 ```python
-DMU=['A','B','C','D','E']
 E={}
-for r in DMU:
-    I=2  # 兩項投入
-    O=3  # 三項產出
-    #X、Y為各DMU的投入與產出情形
-    DMU,X,Y=multidict({('A'):[[11,14],[2,2,1]],('B'):[[7,7],[1,1,1]],('C'):[[11,14],[1,1,2]],('D'):[[14,14],[2,3,1]],('E'):[[14,15],[3,2,3]]})
+I=2  # 兩項投入
+O=3  # 三項產出
+#X、Y為各DMU的投入與產出情形
+DMU,X,Y=multidict({('A'):[[11,14],[2,2,1]],('B'):[[7,7],[1,1,1]],('C'):[[11,14],[1,1,2]],('D'):[[14,14],[2,3,1]],('E'):[[14,15],[3,2,3]]})    
 ```
 ### Model
+- 透過for loop來計算每個決策單位r的效率
 ```python
+for r in DMU:
     m=Model("CRS_model")
 ```
 ### Add decision variables
-- 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>j</sup></sub>
+- 建立決策變數投入項與產出項權重 v<sub>ri</sup></sub>、 u<sub>rj</sup></sub>
 ```python
 
     v,u={},{}
 
     for i in range(I):
-        v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i,lb=0.0001)
+        v[r,i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%s%d"%(r,i),lb=0.0001)
     
     for j in range(O):
-        u[j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%j,lb=0.0001)
+        u[r,j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%s%d"%(r,j),lb=0.0001)
 ```
 ### Update
 ```python
@@ -103,20 +103,20 @@ for r in DMU:
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/picture/crs2-1.png" width="200" height="80">
 
 ```python
-    m.setObjective(quicksum(u[j]*Y[r][j] for j in range(O)),GRB.MAXIMIZE)
+    m.setObjective(quicksum(u[r,j]*Y[r][j] for j in range(O)),GRB.MAXIMIZE)
 ```
 ### Add constraints
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/picture/crs2-2.png" width="275" height="125">
 
 ```python
-    m.addConstr(quicksum(v[i]*X[r][i] for i in range(I))==1)
+    m.addConstr(quicksum(v[r,i]*X[r][i] for i in range(I))==1)
     for k in DMU:
-        m.addConstr(quicksum(u[j]*Y[k][j] for j in range(O))-quicksum(v[i]*X[k][i] for i in range(I))<=0)
+        m.addConstr(quicksum(u[r,j]*Y[k][j] for j in range(O))-quicksum(v[r,i]*X[k][i] for i in range(I))<=0)
 ```
 ### Print result
 ```python
     m.optimize()
-    E[r]="The efficiency of DMU %s:%4.3g"%(r,m.objVal)
+    E[r]="The efficiency of DMU %s:%0.3g"%(r,m.objVal)
     
 for r in DMU:
     print (E[r])
@@ -124,9 +124,9 @@ for r in DMU:
 **最後可得到如下所示的結果**<br>
 從結果我們可知決策單位A、D、E與其他決策單位相比是相較有效率的，其效率值皆為1。
 ```
-    The efficiency of DMU A:   1
+    The efficiency of DMU A:1
     The efficiency of DMU B:0.898
     The efficiency of DMU C:0.848
-    The efficiency of DMU D:   1
-    The efficiency of DMU E:   1
+    The efficiency of DMU D:1
+    The efficiency of DMU E:1
 ```
