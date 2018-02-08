@@ -32,16 +32,16 @@ CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**�
 - J： 產出項個數 j∈J <br>
 - ε： 極小的正值稱之為非阿基米德數(non-Archimedean constant)，通常設為10<sup>-4</sup></sub>或10<sup>-6</sup></sub>(目的為了使任一投入或產出項皆不會被忽略)
 ### § 參數說明
-- X<sub>ik</sup></sub>： 決策單位k (k=1,...,K)使用第i (i=1,...,I)個投入項
-- Y<sub>jk</sup></sub>： 決策單位k (k=1,...,K)使用第j (j=1,...,J)個產出項
+- X<sub>ki</sup></sub>： 決策單位k (k=1,...,K)使用第i (i=1,...,I)個投入項
+- Y<sub>kj</sup></sub>： 決策單位k (k=1,...,K)使用第j (j=1,...,J)個產出項
 ### § 決策變數
-- u<sub>j</sup></sub>： 第j個產出項之權重
-- v<sub>i</sup></sub>： 第i個投入項之權重
-- u<sub>0</sup></sub>： 允許生產函數不必通過原點，可用來判斷規模報酬型態<br>
+- u<sub>rj</sup></sub>： 決策單位r的第j個產出項之權重
+- v<sub>ri</sup></sub>： 決策單位r的第i個投入項之權重
+- u<sub>0r</sup></sub>： 允許生產函數不必通過原點，可用來判斷規模報酬型態<br>
 #### ※透過u<sub>0</sup></sub>的正負來分辨規模報酬
-##### u<sub>0</sup></sub> = 0 為固定規模報酬(CRS)<br>
-##### -u<sub>0</sup></sub> > 0 為規模報酬遞增(DRS)<br>
-##### -u<sub>0</sup></sub> < 0 為規模報酬遞減(IRS)<br>
+##### u<sub>r0</sup></sub> = 0 為固定規模報酬(CRS)<br>
+##### -u<sub>r0</sup></sub> > 0 為規模報酬遞增(DRS)<br>
+##### -u<sub>r0</sup></sub> < 0 為規模報酬遞減(IRS)<br>
 ### § VRS Model
 #### 1. 比率型
 - 目標式： 找出一組對於受評決策單位r最有利的投入項與產出項之權重，以最大化其效率值
@@ -50,7 +50,7 @@ CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**�
 <img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs1.png" width="450" height="250">
  
 #### 2. 原問題
-由於上述的數學模型為分數線性規劃(fractional linear programming)形式，除了會發生多重解的情況外，求解也較不易，因此透過轉換，將其變成下列線性規劃的模式，以方便求解。
+如同在CRS Model所述，由於上述的數學模型為分數線性規劃(fractional linear programming)形式，除了會發生多重解的情況外，求解也較不易，因此透過轉換，將其變成下列線性規劃的模式，以方便求解。
 
 <img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs2.png" width="450" height="260">
 
@@ -68,10 +68,10 @@ CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**�
 <img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/picture/ex2.png" width="500" height="200">
 </div>
 
-- 並能形成如下所示的CRS Model：
+- 並能形成如下所示的VRS Model：
 
 <div align=center>
-<img src="https://github.com/wurmen/DEA/blob/master/CRS_Model/picture/ex3.png" width="450" height="260">
+<img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/ex.png" width="450" height="260">
 </div>
 <br>
 
@@ -98,17 +98,17 @@ for r in DMU:
     m=Model("VRS_model")
 ```
 ### Add decision variables
-- 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>j</sup></sub>以及u<sub>o</sup></sub>
+- 建立決策變數投入項與產出項權重 v<sub>ri</sup></sub>、 u<sub>rj</sup></sub>以及u<sub>or</sup></sub>
 ```python
 
     v,u={},{}
 
     for i in range(I):
-        v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i,lb=0.0001)
+        v[r,i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%s%d"%(r,i),lb=0.0001)
     
     for j in range(O):
-        u[j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%d"%j,lb=0.0001)
-    u0=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS)
+        u[r,j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%s%d"%(r,j),lb=0.0001)
+    u[0,r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS)
 ```
 ### Update
 ```python
@@ -118,29 +118,29 @@ for r in DMU:
 <img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs2-1.png" width="200" height="80">
 
 ```python
-    m.setObjective(quicksum(u[j]*Y[r][j] for j in range(O))-u0,GRB.MAXIMIZE)
+    m.setObjective(quicksum(u[r,j]*Y[r][j] for j in range(O))-u[0,r],GRB.MAXIMIZE)
 ```
 ### Add constraints
 <img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs2-2.png" width="275" height="125">
 
 ```python
-    m.addConstr(quicksum(v[i]*X[r][i] for i in range(I))==1)
+    m.addConstr(quicksum(v[r,i]*X[r][i] for i in range(I))==1)
     for k in DMU:
-        m.addConstr(quicksum(u[j]*Y[k][j] for j in range(O))-quicksum(v[i]*X[k][i] for i in range(I))-u0 <=0)
+        m.addConstr(quicksum(u[r,j]*Y[k][j] for j in range(O))-quicksum(v[r,i]*X[k][i] for i in range(I))-u[0,r] <=0)
 ```
 ### Print result
 ```python
     m.optimize()
-    E[r]="The efficiency of DMU %s:%4.3g"%(r,m.objVal)
+    E[r]="The efficiency of DMU %s:%0.3g"%(r,m.objVal)
     
 for r in DMU:
     print (E[r])
 ```
 **最後可得到如下所示的結果**<br>
 ```
-    The efficiency of DMU A:   1
-    The efficiency of DMU B:   1
+    The efficiency of DMU A:1
+    The efficiency of DMU B:1
     The efficiency of DMU C:0.955
-    The efficiency of DMU D:   1
-    The efficiency of DMU E:   1
+    The efficiency of DMU D:1
+    The efficiency of DMU E:1
 ```
