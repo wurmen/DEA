@@ -1,4 +1,4 @@
-# VRS Model(編輯中)  
+# VRS Model 
 
 *POLab*
 <br>
