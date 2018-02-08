@@ -13,11 +13,11 @@
 ## (一)VRS Model
 **※此為DEA中變動規模報酬(variable return to scale, VRS)的模型建構說明，並以投入導向的模組為例**<br>
 <br>
-在CRS模式中，假設每一單位的投入可得到的產出量是固定的，並不會因為規模大小而改變的固定規模報酬形式，但在現實生產過程中，可能會因為不同的生產規模，規模報酬也會跟著改變，因此Banker等人(1984)將CRS模式修正成VRS模式，在此假設下衡量各決策單位(Decision Making Unit, DMU)的相對效率，並同時評估決策單位是否達到有效的生產規模，故VRS模式可一併衡量**規模效率(scale efficiency)**與**技術效率(technical efficiency)**。<br>
+在CRS模式中，假設每一單位的投入可得到的產出量是固定的，並不會因為規模大小而改變的固定規模報酬形式，但在現實生產過程中，可能會因為不同的生產規模，規模報酬也會跟著改變，因此Banker等人(1984)將CRS模式修正成VRS模式，在此假設下衡量各決策單位(Decision Making Unit, DMU)的相對效率，並同時評估決策單位是否達到有效的生產規模，故VRS模式可一併衡量**規模效率(scale efficiency, SE)**與**技術效率(technical efficiency, TE)**。<br>
 <br>
 CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**，而VRS模式所得的效率值為**技術效率(technical efficiency)**，藉由這兩者之比較可得到**規模效率(scale efficiency)**，因此得出以下公式:<br>
 <br>
-**<p align="center">總體效率值 = 技術效率X規模效率</p>** 
+**<p align="center">總體效率值(OE) = 技術效率(TE)X規模效率(SE)</p>** 
 #### ※規模報酬又可分為三種形式
 ##### 1.固定規模報酬(constant returns to scale, CRS)：<br>
 ###### 產出與投入成正比，且每一單位投入可得到的產出量是固定的；以公司的發展而言，此狀態是最佳的
@@ -26,7 +26,7 @@ CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**�
 ##### 3.規模報酬遞增(increasing returns to scale, IRS)： 
 ###### 投入增加時，產出的增加比例，比投入增加的比例多；以公司的發展而言，此狀態可能位於初創時期，或者進行併購或聯盟等策略
 ### § 符號說明
-- E<sub>r</sup></sub>： 決策單位r的效率值
+- E<sub>r</sup></sub><sup>VRS</sup></sub>： 決策單位r的效率值
 - K： 決策單位(DMU)個數 r,k∈K <br>
 - I： 投入項個數 i∈I <br>
 - J： 產出項個數 j∈J <br>
@@ -37,6 +37,11 @@ CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**�
 ### § 決策變數
 - u<sub>j</sup></sub>： 第j個產出項之權重
 - v<sub>i</sup></sub>： 第i個投入項之權重
+- u<sub>0</sup></sub>： 允許生產函數不必通過原點，可用來判斷規模報酬型態<br>
+#### ※透過u<sub>0</sup></sub>的正負來分辨規模報酬
+##### u<sub>0</sup></sub> = 0 為固定規模報酬(CRS)<br>
+##### -u<sub>0</sup></sub> > 0 為規模報酬遞增(DRS)<br>
+##### -u<sub>0</sup></sub> < 0 為規模報酬遞減(IRS)<br>
 ### § VRS Model
 #### 1. 比率型
 - 目標式： 找出一組對於受評決策單位r最有利的投入項與產出項之權重，以最大化其效率值
