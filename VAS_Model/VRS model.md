@@ -15,7 +15,7 @@
 <br>
 在CRS模式中，假設每一單位的投入可得到的產出量是固定的，並不會因為規模大小而改變的固定規模報酬形式，但在現實生產過程中，可能會因為不同的生產規模，規模報酬也會跟著改變，因此Banker等人(1984)將CRS模式修正成VRS模式，在此假設下衡量各決策單位(Decision Making Unit, DMU)的相對效率，並可同時評估決策單位是否達到最適生產規模(The most productive scale size, MPSS )，故VRS模式可一併衡量**規模效率(scale efficiency, SE)**與**技術效率(technical efficiency, TE)**。<br>
 <br>
-在DEA中，CRS模式所求得的效率值稱為**總體效率值(overall efficiency)**，而VRS模式所得的效率值為**技術效率(technical efficiency)**，藉由這兩者之比較可得到**規模效率(scale efficiency)**，因此得出以下公式:<br>
+在DEA中，CRS模式所求得的效率值稱為**總體效率值(overall efficiency, OE)**，而VRS模式所得的效率值為**技術效率(technical efficiency, TE)**，藉由這兩者之比較可得到**規模效率(scale efficiency, SE)**，因此得出以下公式:<br>
 <br>
 **<p align="center">總體效率值(OE) = 技術效率(TE)X規模效率(SE)</p>** 
 **<p align="center">SE =   E<sub>r</sup></sub><sup>CRS</sup></sub>/E<sub>r</sup></sub><sup>VRS</sup></sub> </p>**
