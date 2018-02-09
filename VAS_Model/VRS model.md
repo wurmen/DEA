@@ -18,6 +18,7 @@
 CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**，而VRS模式所得的效率值為**技術效率(technical efficiency)**，藉由這兩者之比較可得到**規模效率(scale efficiency)**，因此得出以下公式:<br>
 <br>
 **<p align="center">總體效率值(OE) = 技術效率(TE)X規模效率(SE)</p>** 
+**<p align="center">SE =   E<sub>r</sup></sub><sup>CRS</sup></sub>/E<sub>r</sup></sub><sup>VRS</sup></sub> </p>**
 #### ※規模報酬又可分為三種形式
 ##### 1.固定規模報酬(constant returns to scale, CRS)：<br>
 ###### 產出與投入成正比，且每一單位投入可得到的產出量是固定的；以公司的發展而言，此狀態是最佳的
