@@ -38,7 +38,7 @@ CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**�
 - u<sub>rj</sup></sub>： 決策單位r的第j個產出項之權重
 - v<sub>ri</sup></sub>： 決策單位r的第i個投入項之權重
 - u<sub>0r</sup></sub>： 允許生產函數不必通過原點，可用來判斷規模報酬型態<br>
-#### ※透過u<sub>0</sup></sub>的正負來分辨規模報酬
+#### ※透過u<sub>0r</sup></sub>的正負來分辨規模報酬
 ##### u<sub>0r</sup></sub> = 0 為固定規模報酬(CRS)<br>
 ##### -u<sub>0r</sup></sub> > 0 為規模報酬遞增(DRS)<br>
 ##### -u<sub>0r</sup></sub> < 0 為規模報酬遞減(IRS)<br>
