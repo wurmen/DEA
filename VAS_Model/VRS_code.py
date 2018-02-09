@@ -10,25 +10,25 @@ for r in DMU:
         
     m=Model("VRS_model")
     
-    v,u={},{}
+    v,u,u0={},{},{}
     for i in range(I):
         v[r,i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%s%d"%(r,i))
     
     for j in range(O):
         u[r,j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%s%d"%(r,j))
-    u[0,r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS,name="u_0%s"%r)
+    u0[r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS,name="u_0%s"%r)
     
     m.update()
     
-    m.setObjective(quicksum(u[r,j]*Y[r][j] for j in range(O))-u[0,r],GRB.MAXIMIZE)
+    m.setObjective(quicksum(u[r,j]*Y[r][j] for j in range(O))-u0[r],GRB.MAXIMIZE)
         
     m.addConstr(quicksum(v[r,i]*X[r][i] for i in range(I))==1)
     for k in DMU:
-        m.addConstr(quicksum(u[r,j]*Y[k][j] for j in range(O))-quicksum(v[r,i]*X[k][i] for i in range(I))-u[0,r] <=0)
+        m.addConstr(quicksum(u[r,j]*Y[k][j] for j in range(O))-quicksum(v[r,i]*X[k][i] for i in range(I))-u0[r] <=0)
     
     m.optimize()
     
-    E[r]="The efficiency of DMU %s:%0.3f and \n %s= %0.3f"%(r,m.objVal,u[0,r].varName,u[0,r].X)
+    E[r]="The efficiency of DMU %s:%0.3f and \n %s= %0.3f"%(r,m.objVal,u0[r].varName,u0[r].X)
 
 
 for r in DMU:
