@@ -145,3 +145,12 @@ for r in DMU:
     The efficiency of DMU D:1
     The efficiency of DMU E:1
 ```
+
+**整合CRS Model與VRS Model所求得的結果，我們可得到下表:**
+
+
+
+
+
+
+
