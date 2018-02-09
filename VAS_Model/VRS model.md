@@ -148,7 +148,9 @@ for r in DMU:
 
 **整合CRS Model與VRS Model所求得的結果，我們可得到下表:**
 
-
+<div align=center>
+<img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/all.jpg" width="550" height="200">
+</div>
 
 
 
