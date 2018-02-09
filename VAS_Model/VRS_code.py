@@ -16,7 +16,7 @@ for r in DMU:
     
     for j in range(O):
         u[r,j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%s%d"%(r,j))
-    u[0,r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS)
+    u[0,r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS,name="u_0%s"%r)
     
     m.update()
     
@@ -28,7 +28,8 @@ for r in DMU:
     
     m.optimize()
     
-    E[r]="The efficiency of DMU %s:%0.3g"%(r,m.objVal)
+    E[r]="The efficiency of DMU %s:%0.3f and \n %s= %0.3f"%(r,m.objVal,u[0,r].varName,u[0,r].X)
+
 
 for r in DMU:
     print (E[r])
