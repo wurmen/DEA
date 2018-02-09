@@ -109,7 +109,7 @@ for r in DMU:
     
     for j in range(O):
         u[r,j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%s%d"%(r,j),lb=0.0001)
-    u[0,r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS)
+    u[0,r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS,name="u_0%s"%r)
 ```
 ### Update
 ```python
@@ -130,21 +130,28 @@ for r in DMU:
         m.addConstr(quicksum(u[r,j]*Y[k][j] for j in range(O))-quicksum(v[r,i]*X[k][i] for i in range(I))-u[0,r] <=0)
 ```
 ### Print result
+- 取得各決策單位之效率值，並透過gurobi屬性varName、X來取得各決策單位u<sub>0r</sup></sub>之值
 ```python
     m.optimize()
-    E[r]="The efficiency of DMU %s:%0.3g"%(r,m.objVal)
+    E[r]="The efficiency of DMU %s:%0.3f and \n %s= %0.3f"%(r,m.objVal,u[0,r].varName,u[0,r].X)
     
 for r in DMU:
     print (E[r])
 ```
 **最後可得到如下所示的結果**<br>
 ```
-    The efficiency of DMU A:1
-    The efficiency of DMU B:1
-    The efficiency of DMU C:0.955
-    The efficiency of DMU D:1
-    The efficiency of DMU E:1
+    The efficiency of DMU A:1.000 and 
+     u_0A= -0.273
+    The efficiency of DMU B:1.000 and 
+     u_0B= -1.000
+    The efficiency of DMU C:0.955 and 
+     u_0C= -0.318
+    The efficiency of DMU D:1.000 and 
+     u_0D= -0.250
+    The efficiency of DMU E:1.000 and 
+     u_0E= -0.200
 ```
+
 
 **整合CRS Model與VRS Model所求得的結果，我們可得到下表:**
 
