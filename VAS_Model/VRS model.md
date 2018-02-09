@@ -102,14 +102,14 @@ for r in DMU:
 - 建立決策變數投入項與產出項權重 v<sub>ri</sup></sub>、 u<sub>rj</sup></sub>以及u<sub>or</sup></sub>
 ```python
 
-    v,u={},{}
+    v,u,u0={},{},{}
 
     for i in range(I):
         v[r,i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%s%d"%(r,i),lb=0.0001)
     
     for j in range(O):
         u[r,j]=m.addVar(vtype=GRB.CONTINUOUS,name="u_%s%d"%(r,j),lb=0.0001)
-    u[0,r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS,name="u_0%s"%r)
+    u0[r]=m.addVar(lb=-1000,vtype=GRB.CONTINUOUS,name="u_0%s"%r)
 ```
 ### Update
 ```python
@@ -119,7 +119,7 @@ for r in DMU:
 <img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs2-1.png" width="200" height="80">
 
 ```python
-    m.setObjective(quicksum(u[r,j]*Y[r][j] for j in range(O))-u[0,r],GRB.MAXIMIZE)
+    m.setObjective(quicksum(u[r,j]*Y[r][j] for j in range(O))-u0[r],GRB.MAXIMIZE)
 ```
 ### Add constraints
 <img src="https://github.com/wurmen/DEA/blob/master/VAS_Model/picture/vrs2-2.png" width="275" height="125">
@@ -127,13 +127,13 @@ for r in DMU:
 ```python
     m.addConstr(quicksum(v[r,i]*X[r][i] for i in range(I))==1)
     for k in DMU:
-        m.addConstr(quicksum(u[r,j]*Y[k][j] for j in range(O))-quicksum(v[r,i]*X[k][i] for i in range(I))-u[0,r] <=0)
+        m.addConstr(quicksum(u[r,j]*Y[k][j] for j in range(O))-quicksum(v[r,i]*X[k][i] for i in range(I))-u0[r] <=0)
 ```
 ### Print result
 - 取得各決策單位之效率值，並透過gurobi屬性varName、X來取得各決策單位u<sub>0r</sup></sub>之值
 ```python
     m.optimize()
-    E[r]="The efficiency of DMU %s:%0.3f and \n %s= %0.3f"%(r,m.objVal,u[0,r].varName,u[0,r].X)
+    E[r]="The efficiency of DMU %s:%0.3f and \n %s= %0.3f"%(r,m.objVal,u0[r].varName,u0[r].X)
     
 for r in DMU:
     print (E[r])
