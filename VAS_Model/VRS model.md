@@ -41,8 +41,8 @@ CRS模式中所求得的效率值稱為**總體效率值(overall efficiency)**�
 - u<sub>0r</sup></sub>： 允許生產函數不必通過原點，可用來判斷規模報酬型態<br>
 #### ※透過u<sub>0r</sup></sub>的正負來分辨規模報酬
 ##### u<sub>0r</sup></sub> = 0 為固定規模報酬(CRS)<br>
-##### -u<sub>0r</sup></sub> > 0 為規模報酬遞增(DRS)<br>
-##### -u<sub>0r</sup></sub> < 0 為規模報酬遞減(IRS)<br>
+##### -u<sub>0r</sup></sub> > 0 為規模報酬遞增(IRS)<br>
+##### -u<sub>0r</sup></sub> < 0 為規模報酬遞減(DRS)<br>
 ### § VRS Model
 #### 1. 比率型
 - 目標式： 找出一組對於受評決策單位r最有利的投入項與產出項之權重，以最大化其效率值
