@@ -137,11 +137,8 @@ Proc1yI：紀錄製程1總產出中將成為製程3投入項的數據<br>
 ### Add decision variables
 - 建立決策變數投入項與產出項權重 v<sub>i</sup></sub>、 u<sub>r</sup></sub>
 ```python
-    P1={}
-    P2={}
-    P3={}
-    v={}
-    u={}
+    P1,P2,P3={},{},{}
+    v,u={},{}
    
     for i in range(I):
         v[i]=m.addVar(vtype=GRB.CONTINUOUS,name="v_%d"%i)
