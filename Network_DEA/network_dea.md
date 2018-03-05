@@ -88,7 +88,7 @@
 
 <img src="https://github.com/wurmen/DEA/blob/master/Network_DEA/pictures/model2.png" width="450" height="120">
 
-### § 各製程之效率
+### § 各階段之效率
 
 求解完後，可利用下列的數學式來計算各階段的效率值
 
