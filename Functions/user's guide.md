@@ -32,7 +32,8 @@
 1<br>
 1<br>
 1<br>
-## (二)使用步驟
+
+## <span>(二)使用步驟<span>
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/1.PNG">
 </div>
