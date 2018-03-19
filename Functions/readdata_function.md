@@ -1,9 +1,9 @@
 # Read data function
 
-### 讀檔的function主要分為兩種，詳細的說明如下所示：
-* [csv2dict()](#csv2dict()) <br>
+讀檔的function主要分為兩種，詳細的說明如下所示：
+* [csv2dict()](#csv2dict())
 主要用於投入與產出資料都放在同一個檔案(.csv )時使用。
-* [csv2dict_sep()](#csv2dict_sep()) <br>
+* [csv2dict_sep()](#csv2dict_sep())
 當產出與投入資料放於不同檔案(.csv )時使用。
 
 ## csv2dict()
