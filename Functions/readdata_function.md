@@ -69,3 +69,6 @@ DMU, X = csv2dict_sep(“data_input.csv”)
 ```python
 DMU, Y = csv2dict_sep(“data_output.csv”, vrange =[2,4], assign=True)
 ```
+<div align=center>
+<img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/csv2dictsep_inoutputdata_example.gif" width="500" height="230">
+</div>
