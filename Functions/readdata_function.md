@@ -1,6 +1,6 @@
 # Read data function
 
-讀檔的function主要分為兩種，詳細的說明如下所示：
+### 讀檔的function主要分為兩種，詳細的說明如下所示：
 * [csv2dict()](#csv2dict()) <br>
 主要用於投入與產出資料都放在同一個檔案(.csv )時使用。
 * [csv2dict_sep()](#csv2dict_sep()) <br>
@@ -44,7 +44,7 @@ DMU, X, Y = csv2dict(“data.csv”, in_range =[2,4], out_range=[5,6],assign=Tru
 
 
 
-csv2dict_sep() 
+## csv2dict_sep() 
 ### § Description
 - 用來讀取各決策單位投入與產出資料的csv檔，將資料轉換成字典格式(dictionary type)，以利後續建模使用，與csv2dict()不同的是，此函數主要用於投入與產出資料放於兩個不同檔案時使用。
 
