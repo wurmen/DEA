@@ -34,4 +34,8 @@ DMU, X, Y = csv2dict(“data.csv”, in_range=[2,3], out_range=[4,6],assign=Fals
 ```python
 DMU, X, Y = csv2dict(“data.csv”, in_range =[2,4], out_range=[5,6],assign=True)
 ```
+<br>
 
+<div align=center>
+<img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/csv2dict_data_example.gif" width="450" height="200">
+</div>
