@@ -1,6 +1,6 @@
 # Read data function
 
-讀檔的function主要分為兩種，詳細的說明如下所示：
+在使用DEA functions時，必須先將要衡量的資料讀取成主函式所要使用的資料格式，以利後續建模使用，因此在此建構兩種讀檔的函式，詳細的說明如下所示：
 * [csv2dict()](#csv2dict()) <br>
 主要用於投入與產出資料都放在同一個檔案(.csv )時使用。
 * [csv2dict_sep()](#csv2dict_sep()) <br>
@@ -8,7 +8,7 @@
 
 ##  <h2 id="csv2dict()">csv2dict()</h2>
 ### § Description
-- 用來讀取各決策單位投入與產出資料的csv檔，將資料轉換成字典格式(dictionary type)，以利後續建模使用，此函數**主要用於投入與產出資料都放在同一個檔案時使用**。
+- 用來讀取各決策單位投入與產出資料的csv檔，將資料轉換成字典格式(dictionary type)，以利後續建模使用，此函式**主要用於投入與產出資料都放在同一個檔案時使用**。
 
 ### § Usage
 - csv2dict(dea_data, in_range, out_range, assign=False)
@@ -46,7 +46,7 @@ DMU, X, Y = csv2dict(“data.csv”, in_range =[2,4], out_range=[5,6],assign=Tru
 
 ##  <h2 id="csv2dict_sep()">csv2dict_sep()</h2>
 ### § Description
-- 用來讀取各決策單位投入與產出資料的csv檔，將資料轉換成字典格式(dictionary type)，以利後續建模使用，與csv2dict()不同的是，此函數主要用於投入與產出資料放於兩個不同檔案時使用。
+- 用來讀取各決策單位投入與產出資料的csv檔，將資料轉換成字典格式(dictionary type)，以利後續建模使用，與csv2dict()不同的是，此函式主要用於投入與產出資料放於兩個不同檔案時使用。
 
 ### § Usage
 - csv2dict_sep(dea_data, vrange =[0,0], assign=False)
@@ -60,7 +60,7 @@ DMU, X, Y = csv2dict(“data.csv”, in_range =[2,4], out_range=[5,6],assign=Tru
   - **False**：表示vrange的值是一個範圍。例如， vrange =[2,4]，代表csv檔案中從第二行至第四行的資料會轉換成字典形式，用於後續建模<br>
 
 ### § Notice
-- 檔案必須為csv格式，資料從第一行的第二列開始，首行必須為DMU的名稱，首列可為各產出投入資料的名稱，接著緊鄰著投入或產出資料。若無指定特定行做為產出或投入資料，函數會直接從第二行開始讀取，如Example圖所示
+- 檔案必須為csv格式，資料從第一行的第二列開始，首行必須為DMU的名稱，首列可為各產出投入資料的名稱，接著緊鄰著投入或產出資料。若無指定特定行做為產出或投入資料，函式會直接從第二行開始讀取，如Example圖所示
 - 檔案內數值不能包含逗號
 ### § Example(以下圖為例)
 #### 不指定形式
