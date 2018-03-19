@@ -8,14 +8,14 @@
 <br><br>
 在此針對基本DEA model建構幾個簡單的DEA Functions，使大家能夠更輕鬆的利用這些DEA函數來求解效率值，或者可由這些已建好的函數去做延伸。
 <br>
-[使用步驟](#use)
+[使用步驟](use)
 
 ## (一)使用前注意事項
 1. 必須具備gurobi package(Gurobi 6.5.2)、python3.6
 2. 需將存放DEA Functions的py檔與所要使用的程式碼檔及數據放在同一資料夾中
 3. 產出與投入資料須符合所需格式
 
-## (二)使用步驟 {#use}
+## (二)使用步驟 {use}
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/1.PNG">
 </div>
