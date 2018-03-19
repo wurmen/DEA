@@ -14,7 +14,21 @@
 1. 必須具備gurobi package(Gurobi 6.5.2)、python3.6
 2. 需將存放DEA Functions的py檔與所要使用的程式碼檔及數據放在同一資料夾中
 3. 產出與投入資料須符合所需格式
+1
+1
+1
+1
 
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
 ## (二)使用步驟
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/1.PNG">
