@@ -32,3 +32,5 @@ DMU,X,Y=DEA.csv2dict("data.csv",in_range=[2,4],out_range=[5,8],assign=True)
 ```python
 DEA.CRS_input(DMU,X,Y) 
 ```
+## (三)範例
+
