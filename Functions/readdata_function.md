@@ -37,7 +37,7 @@ DMU, X, Y = csv2dict(“data.csv”, in_range =[2,4], out_range=[5,6],assign=Tru
 <br>
 
 <div align=center>
-<img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/csv2dict_data_example.gif" width="450" height="200">
+<img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/csv2dict_data_example.gif" width="430" height="160">
 </div>
 
 
@@ -51,11 +51,11 @@ DMU, X, Y = csv2dict(“data.csv”, in_range =[2,4], out_range=[5,6],assign=Tru
 - 回傳二個值，分別是DMU(list)跟Input/Output(dict)
 
 ### § Arguments
-- dea_data： string, 資料所在的路徑位置(path)，必須是csv檔案
-- vrange：list, 資料的行範圍 (default=[0,0]，代表全範圍的值皆用於後續建模)
-- assign：boolean, 是否要指定行範圍 (default = False)
-  - True：表示vrange的值是指定行數。例如， vrange =[2,4]，代表csv檔案中第二行跟第四行的資料會轉換成字典形式，用於後續建模
-  - False：表示vrange的值是一個範圍。例如， vrange =[2,4]，代表csv檔案中從第二行至第四行的資料會轉換成字典形式，用於後續建模
+- **dea_data**： string, 資料所在的路徑位置(path)，必須是csv檔案
+- **vrange**：list, 資料的行範圍 (default=[0,0]，代表全範圍的值皆用於後續建模)
+- **assign**：boolean, 是否要指定行範圍 (default = False)<br>
+  - **True**：表示vrange的值是指定行數。例如， vrange =[2,4]，代表csv檔案中第二行跟第四行的資料會轉換成字典形式，用於後續建模<br>
+  - **False**：表示vrange的值是一個範圍。例如， vrange =[2,4]，代表csv檔案中從第二行至第四行的資料會轉換成字典形式，用於後續建模<br>
 
 ### § Notice
 - 檔案必須為csv格式，資料從第一行的第二列開始，首行必須為DMU的名稱，首列可為各產出投入資料的名稱，接著緊鄰著投入或產出資料。若無指定特定行做為產出或投入資料，函數會直接從第二行開始讀取，如下圖所示
