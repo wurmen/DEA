@@ -43,7 +43,7 @@
 建議將X與Z_input兩項資料放置同一csv檔內，形成投入資料，Y與Z_output放在同一csv檔，形成產出資料，再各自透過函式csv2dict_for_network_dea()讀取，回傳X、Z_input及Y、Z_output的字典格式
 
 #### 3.範例
-#### Example1
+#### ◎ Example1
 
 **題目描述**
 - 下圖是一個由三個製程所形成的系統，該系統最初有兩項投入，最終會有三項產出，而系統內部各製程的投入與產出情形，如下圖所示：<br>
@@ -73,10 +73,26 @@
 </div>
 <br>
 
-**給定資料型式**
+**給定資料型式**<br>
 
+- 投入資料(Input data)<br>
 
+整體系統投入共有兩項X</sub><sub>1</sup></sub>、X</sub><sub>2</sup></sub> (X)，投入項是來自某內部製程的產出共有兩項Y</sub><sub>1</sup></sub>、Y</sub><sub>2</sup></sub> (Z_input)，將同角色的資料放一起，以利讀檔，另外，雖然Z_input只跟製程三有關，但為了程式給定權重的方便，其他皆補0值。
+<div align=center>
+<img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/example1_inputdata.gif" >
+</div>
+<br>
 
+- 產出資料(Output data) <br>
+
+最終成為系統產出的產出項有一項Y</sub><sub>3</sup></sub> (Y)，雖然Y</sub><sub>1</sup></sub>、Y</sub><sub>2</sup></sub>部分也會成為系統最終產出，但由於它們會有部分給製程3當作製程3的投入，因此，在此將此兩項視為Z_output，如投入資料所述，相同角色的資料放在一起，以利讀檔，且雖然Z_output只跟製程1、2有關，但為了程式給定權重的方便，其他皆補0值。
+
+**※注意：基本上，Z_input與Z_output在題目中是相同的，都是Y</sub><sub>1</sup></sub>、Y</sub><sub>2</sup></sub>，他們各自擁有相同的權重，只是再給定資料時，對於不同製程所扮演的角色不同，給定的資料也會不同，才會將其分為Z_input與Z_output，因此在投入資料Z_input與產出資料Z_output的順序要相同，才不會使程式再給定權重時發生錯誤。**
+
+<div align=center>
+<img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/example1_outputdata.gif" >
+</div>
+<br>
 
 
 
