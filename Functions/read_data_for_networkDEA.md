@@ -23,8 +23,8 @@
 
 ### § Arguments
 - **dea_data**：string, 資料所在的路徑位置(path)，必須是csv檔案
-- **v1_range**：list, 整體系統及各製程中，來自外部的投入資料 **(X)** 的行範圍 (或者整體系統及各製程中，為系統最終產出 **(Y)** 的行範圍)
-- **v2_range**：list, 整體系統及各製程中，該投入為來自某內部製程產出資料 **(Z_input)** 的行範圍 (或者整體系統及各製程中，該產出將成為某內部製程投入資料 **(Z_output)** 的行範圍)
+- **v1_range**：list, 整體系統及各製程中，來自外部的投入資料 **(X)** 的行範圍(或者整體系統及各製程中，為系統最終產出 **(Y)** 的行範圍)，內含兩個值起始行數及結束行數
+- **v2_range**：list, 整體系統及各製程中，該投入為來自某內部製程產出資料 **(Z_input)** 的行範圍 (或者整體系統及各製程中，該產出將成為某內部製程投入資料 **(Z_output)** 的行範圍)，內含兩個值起始行數及結束行數
 - **p_n**：interger, 內部製程的數量
 
 ### § Notice
@@ -76,8 +76,9 @@
 **給定資料型式**<br>
 
 - 投入資料(Input data)<br>
-
-整體系統投入共有兩項X</sub><sub>1</sup></sub>、X</sub><sub>2</sup></sub> (X)，投入項是來自某內部製程的產出共有兩項Y</sub><sub>1</sup></sub>、Y</sub><sub>2</sup></sub> (Z_input)，將同角色的資料放一起，以利讀檔，另外，雖然Z_input只跟製程三有關，但為了程式給定權重的方便，其他皆補0值。
+1. 第一行為每個決策單位的名稱及各製程的名稱(對於每個決策單位，先寫決策單位名稱接著才是製程名稱)，讀檔程式會自動抓取每個決策單位的名稱，以方便結果的呈現<br>
+2. 第一列為各投入資料名稱，讀檔程式會重第一行的第二列開始讀起<br>
+3. 整體系統投入共有兩項X</sub><sub>1</sup></sub>、X</sub><sub>2</sup></sub> (X)，投入項是來自某內部製程的產出共有兩項Y</sub><sub>1</sup></sub>、Y</sub><sub>2</sup></sub> (Z_input)，將同角色的資料放一起，以利讀檔，另外，雖然Z_input只跟製程三有關，但為了程式給定權重的方便，其他皆補0值。
 <div align=center>
 <img src="https://github.com/wurmen/DEA/blob/master/Functions/picture/example1_inputdata.gif" >
 </div>
@@ -94,8 +95,16 @@
 </div>
 <br>
 
+**讀檔方式**<br>
+- 投入資料(Input data)<br>
+第2-3行為X，第4-5行為Z_input，共有三個製程
+```python
+ DMU,X,Z_input,p_n=csv2dict_for_network_dea("Input data.csv", v1_range=[2,3], v2_range=[4,5], p_n=3)
+```
 
-
-
-
+- 產出資料(Output data)<br>
+第2行為Y，第3-4行為Z_output，共有三個製程
+```python
+ DMU,Y,Z_output,p_n=csv2dict_for_network_dea("Input data.csv", v1_range=[2,2], v2_range=[3,4], p_n=3)
+```
 
