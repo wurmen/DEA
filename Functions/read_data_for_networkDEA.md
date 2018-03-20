@@ -11,7 +11,7 @@
 ------------
 
 由於Network DEA涉及了決策單位的內部製程(processes)，整體系統以及每個製程都有各自的投入與產出，加上有些製程的產出會成為部分製程的投入，因此，有別於[基本DEA function的讀檔函式](https://github.com/wurmen/DEA/blob/master/Functions/readdata_function.md)，在此對程式的部份內容進行了修改，以利Network DEA function的使用。<br>
-在本文中，會對讀檔的函式進行參數及使用說明，並於最後舉兩個例子解說資料要如何給定，對於使用Network DEA function，資料的給定相當重要，因此可能要多花點時間閱讀最後的兩個範例說明。
+在本文中，會對讀檔的函式進行參數及使用說明，並於最後舉兩個例子解說資料要如何給定，對於使用Network DEA function，資料的給定相當重要，因此可能要多花點時間閱讀最後的兩個[範例說明](#Example)。
 
 ## csv2dict_for_network_dea()
 
@@ -31,7 +31,7 @@
 - 檔案必須為csv格式，**資料從第一行的第二列開始讀起**，並且首行必須為DMU及各製程的名稱，首列可為各產出投入資料的名稱，如Example所示
 - 檔案內數值不能包含逗號
 
-### § Example
+### § <h2 id="Example">§ Example</h2>
 #### 1.說明
 為了簡化Network DEA function的複雜度，在此偏向給定較完整的整體資料來對主函式做使用，首先，必須先釐清整體系統及各製程投入與產出的角色，在Network DEA function中，主要將投入項分為X、Z_input兩個角色，產出項分為Y、Z_output兩個角色，各角色說明如下：<br>
 - **X**：來自系統外部的投入
