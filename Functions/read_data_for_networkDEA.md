@@ -31,7 +31,7 @@
 - 檔案必須為csv格式，**資料從第一行的第二列開始讀起**，並且首行必須為DMU及各製程的名稱，首列可為各產出投入資料的名稱，如Example所示
 - 檔案內數值不能包含逗號
 
-### <h2 id="Example">§ Example</h2>
+### <h2 id="Example">§ Example (※範例執行結果可點擊[這裡](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Read_data_for_network_DEA_function%20example.ipynb))</h2>
 #### 1.說明
 為了簡化Network DEA function的複雜度，在此偏向給定較完整的整體資料來對主函式做使用，首先，必須先釐清整體系統及各製程投入與產出的角色，在Network DEA function中，主要將投入項分為X、Z_input兩個角色，產出項分為Y、Z_output兩個角色，各角色說明如下：<br>
 - **X**：來自系統外部的投入
