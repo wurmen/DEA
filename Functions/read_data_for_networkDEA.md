@@ -100,14 +100,14 @@
 
 第2-3行為X，第4-5行為Z_input，共有三個製程
 ```python
- DMU,X,Z_input,p_n=csv2dict_for_network_dea("Input data.csv", v1_range=[2,3], v2_range=[4,5], p_n=3)
+ DMU, X, Z_input, p_n=csv2dict_for_network_dea("Input data.csv", v1_range=[2,3], v2_range=[4,5], p_n=3)
 ```
 
 - 產出資料(Output data)<br>
 
 第2行為Y，第3-4行為Z_output，共有三個製程
 ```python
- DMU,Y,Z_output,p_n=csv2dict_for_network_dea("Output data.csv", v1_range=[2,2], v2_range=[3,4], p_n=3)
+ DMU, Y, Z_output, p_n=csv2dict_for_network_dea("Output data.csv", v1_range=[2,2], v2_range=[3,4], p_n=3)
 ```
 
 #### ◎ Example2
@@ -162,12 +162,12 @@
 
 第2-3行為X，第4-5行為Z_input，共有兩個製程
 ```python
- DMU,X,Z_input,p_n=csv2dict_for_network_dea("Input data.csv", v1_range=[2,3], v2_range=[4,5], p_n=2)
+ DMU, X, Z_input, p_n=csv2dict_for_network_dea("Input data.csv", v1_range=[2,3], v2_range=[4,5], p_n=2)
 ```
 
 - 產出資料(Output data)<br>
 
 第2-3行為Y，第4-5行為Z_output，共有兩個製程
 ```python
- DMU,Y,Z_output,p_n=csv2dict_for_network_dea("Output data.csv", v1_range=[2,3], v2_range=[4,5], p_n=2)
+ DMU, Y, Z_output, p_n=csv2dict_for_network_dea("Output data.csv", v1_range=[2,3], v2_range=[4,5], p_n=2)
 ```
