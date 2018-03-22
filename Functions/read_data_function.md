@@ -1,5 +1,12 @@
 # Read data function
 
+*POLab*
+<br>
+*2018/03/20*
+<br>
+[【回到首頁】](https://github.com/wurmen/DEA)
+<br>
+<br>
 在使用DEA functions時，必須先將要衡量的資料讀取成主函式所要使用的資料格式，以利後續建模使用，因此在此建構兩種讀檔的函式，詳細的說明如下所示：
 * [csv2dict()](#csv2dict()) <br>
 主要用於投入與產出資料都放在同一個檔案(.csv )時使用。
