@@ -10,6 +10,14 @@
 |2018-02-05|[VRS Model](https://github.com/wurmen/DEA/blob/master/VAS_Model/VRS%20model.md)|
 |2018-01-30|[Network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
 
+#### § DEA Models Functions
+|更新時間|文章|
+|---|---|
+|2018-03-23|[DEA Functions Instructions](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md)|
+|2018-03-23|[Read data functions for basic DEA models](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md)|
+|2018-03-23|[Basic DEA functions](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md)|
+|2018-03-23|[Read data function for network DEA](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md)|
+|2018-03-23|[Network DEA function](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md)|
 --------
 ### 參考資源(Python-Gurobi)
 若對python-gurobi的建模較不熟悉，可參考下面資源~
