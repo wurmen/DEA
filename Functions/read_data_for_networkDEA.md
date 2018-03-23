@@ -1,4 +1,4 @@
-# Read data for network DEA function
+# Read data function for network DEA 
 *POLab*
 <br>
 *2018/03/20*
