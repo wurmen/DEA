@@ -7,7 +7,7 @@
 [【回到首頁】](https://github.com/wurmen/DEA)
 
 本文主要針對所建立的Network DEA模型函式進行說明: <br>
-(※函式執行範例可參考[這裡])
+(※函式執行範例可參考[這裡](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Network_DEA_function_example.ipynb))
 
 
 ## network()
