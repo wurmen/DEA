@@ -6,7 +6,7 @@
 <br>
 [【回到首頁】](https://github.com/wurmen/DEA)
 
-本文主要針對所建立的基本DEA模型函式進行說明:<br>
+本文主要針對所建立的基本DEA模型函式進行說明: (※函式執行範例可參考[這裡](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/basic_DEA_function.ipynb))<br>
 * [CRS()](#CRS) <br>
 DEA固定規模報酬模型函式
 * [VRS()](#VRS) <br>
