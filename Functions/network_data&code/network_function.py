@@ -111,4 +111,4 @@ def network(DMU,X,Y,Z_input,Z_output,p_n,var_lb):
             P_efficiency[r,p]=((sum(u[r,j].x*Y[r][p+1][j] for j in range(O))+sum(w[r,g].x*Z_output[r][p+1][g] for g in range(G)))/
                         (sum(v[r,i].x*X[r][p+1][i] for i in range(I)) + sum(w[r,g].x*Z_input[r][p+1][g] for g in range(G))))
             print('The efficiency and inefficiency of Process %s for DMU %s:%0.4f and %0.4g'%(p,r,P_efficiency[r,p],P[r,r,p].slack))
-    return E
+    #return E
