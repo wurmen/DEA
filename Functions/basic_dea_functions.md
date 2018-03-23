@@ -24,7 +24,7 @@ DEA變動規模報酬模型函式
 - **DMU**：list, 記錄所有要被衡量效率值的DMU名稱列表，可放入經由csv2dict()或csv2dict_sep()轉換後的回傳值(DMU)
 - **X**：dict, 記錄每個DMU所對應的投入資料，可放入經由csv2dict()或csv2dict_sep()轉換後的回傳值(X)
 - **Y**：dict, 記錄每個DMU所對應的產出資料，可放入經由csv2dict()或csv2dict_sep()轉換後的回傳值(Y)
-- **orientation**： string, DEA模型定位，屬於產出導向output，還是投入導向input
+- **orientation**： string, DEA模型定位，用來設定是屬於產出導向output，還是投入導向input
 - **dual**： boolean, 決定是(True)否(False)要為對偶模式
 
 ## <h2 id="VRS">VRS()</h2>
@@ -39,5 +39,5 @@ DEA變動規模報酬模型函式
 - **DMU**：list, 記錄所有要被衡量效率值的DMU名稱列表，可放入經由csv2dict()或csv2dict_sep()轉換後的回傳值(DMU)
 - **X**：dict, 記錄每個DMU所對應的投入資料，可放入經由csv2dict()或csv2dict_sep()轉換後的回傳值(X)
 - **Y**：dict, 記錄每個DMU所對應的產出資料，可放入經由csv2dict()或csv2dict_sep()轉換後的回傳值(Y)
-- **orientation**： string, DEA模型定位，屬於產出導向output，還是投入導向input
+- **orientation**： string, DEA模型定位，用來設定屬於產出導向output，還是投入導向input
 - **dual**： boolean, 決定是(True)否(False)要為對偶模式
