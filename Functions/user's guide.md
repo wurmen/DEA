@@ -38,5 +38,7 @@ DEA.CRS_input(DMU,X,Y)
 - [Read data function for network DEA model](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md)
 - Network DEA function
 
+## (四)範例
+- [Read data function examples for basic DEA models](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb)
 
 
