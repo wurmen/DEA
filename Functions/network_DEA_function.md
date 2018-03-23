@@ -10,7 +10,7 @@
 (※函式執行範例可參考[這裡])
 
 
-## Network DEA function
+## network()
 
 ### § Description
 - 本函式是將[高強教授](http://www.iim.ncku.edu.tw/files/11-1407-20368.php?Lang=zh-tw)在2007發表的
