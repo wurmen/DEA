@@ -7,11 +7,13 @@
 [【回到首頁】](https://github.com/wurmen/DEA)
 <br>
 <br>
-在使用DEA functions時，必須先將要衡量的資料讀取成主函式所要使用的資料格式，以利後續建模使用，因此在此建構兩種讀檔的函式，詳細的說明如下所示：
+在使用DEA functions時，必須先將要衡量的資料讀取成主函式所要使用的資料格式，以利後續建模使用，因此在此建構兩種讀檔的函式，詳細的說明如下所示(※函式執行示範可參考[這裡](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb))：
 * [csv2dict()](#csv2dict()) <br>
 主要用於投入與產出資料都放在同一個檔案(.csv )時使用。
 * [csv2dict_sep()](#csv2dict_sep()) <br>
 當產出與投入資料放於不同檔案(.csv )時使用。
+
+※函式執行結果可參考[這裡](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb)
 
 ## <h2 id="csv2dict()">csv2dict()</h2>
 ### § Description
