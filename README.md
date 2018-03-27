@@ -18,8 +18,6 @@
 
 * itertools
 
-*
-
 --------
 
 ## <h2 id='DEA_model'>DEA 建模流程介紹 </h2>
