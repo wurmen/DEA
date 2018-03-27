@@ -2,21 +2,23 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-* 最完整的資料包絡分析(Data Envelopment Analysis, DEA)建模流程介紹，[:arrow_right:](#DEA_model)
+* 最完整的資料包絡分析(Data Envelopment Analysis, DEA)建模流程介紹[:arrow_right:](#DEA_model)
 
-* 使用 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 進行線性規劃(Linear Programming)的求解，
+* 使用 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 進行線性規劃(Linear Programming)的求解
 
-* 開發擴充函式以便進行 DEA 的迅速建模，[:arrow_right:](#DEA_function)
+* 開發擴充函式以便進行 DEA 的迅速建模[:arrow_right:](#DEA_function)
 
 --------
 
-## 基本(Dependency)
+## Requirement
 
 * Python 3.6
 
-* Gurobi Python interface ([安裝教學](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md))
+* gurobipy ([Gurobi Python interface安裝教學](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md))
 
-* pandas
+* itertools
+
+*
 
 --------
 
