@@ -2,7 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## 內容概述
 * 最完整的資料包絡分析(Data Envelopment Analysis, DEA)建模流程介紹。
 
 * 使用 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 進行線性規劃(Linear Programming)的求解。
@@ -11,16 +10,29 @@
 
 
 ## DEA 建模流程介紹
+
+目前包含以下 DEA 模型的算法介紹與建模流程：
+
+* CRS(constant return to scale; input-oriented) ：固定規模報酬
+
+* VRS(variable return to scale; input-oriented) ：變動規模報酬
+
+* Network DEA：探討系統內部各階段的效率值
+
+(持續更新中)
+
+完整介紹及流程請參考以下文章：
+
 |更新時間|文章|
-|---|---|
+|---|:--:|
 |2018-01-29|[CRS Model](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS%20model.md)|
 |2018-02-05|[VRS Model](https://github.com/wurmen/DEA/blob/master/VAS_Model/VRS%20model.md)|
 |2018-01-30|[Network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
 
 
-## DEA 函式(迅速建模)
+## DEA 擴充函式(迅速建模)
 |更新時間|文章|
-|---|---|
+|---|:---:|
 |2018-03-23|[DEA Functions Instructions](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md)|
 |2018-03-23|[Read data functions for basic DEA models](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md)|
 |2018-03-23|[Basic DEA functions](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md)|
@@ -29,8 +41,8 @@
 --------
 
 
-## 額外資源 (Python-Gurobi)
-若對[Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface)的建模較不熟悉，可參考我先前寫的介紹資源：
+## 額外資源 (Python-Gurobi Tutorial)
+若對 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 的建模較不熟悉，可參考我先前寫的教學資源：
 
 - [環境安裝教學](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md)
 - [Python+Gurobi基本架構](https://github.com/wurmen/Gurobi-Python/blob/master/python-gurobi%20%20model/Python+Gurobi%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B.md)<br>
