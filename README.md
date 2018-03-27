@@ -10,7 +10,13 @@
 
 --------
 
-## 基本
+## 基本(Dependency)
+
+* Python 3.6
+
+* Gurobi Python interface ([安裝教學](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md))
+
+* pandas
 
 --------
 
