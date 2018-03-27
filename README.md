@@ -2,9 +2,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+## 內容概述
+* 最完整的資料包絡分析(Data Envelopment Analysis, DEA)建模流程介紹。
 
-### 內容概述
-在此主要透過一些範例來說明如何利用Python-Gurobi來建構資料包絡分析模組(Data-Envelopment-Analysis, DEA)
+* 使用 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 進行線性規劃(Linear Programming)的求解。
+
+* 開發擴充函式以便進行 DEA 的迅速建模。
+
+
 
 #### § DEA Models
 |更新時間|文章|
