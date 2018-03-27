@@ -8,18 +8,23 @@
 
 * 開發擴充函式以便進行 DEA 的迅速建模。
 
+--------
+
+## 基本
+
+--------
 
 ## DEA 建模流程介紹(持續更新中)
 
-目前包含以下 DEA 模型的算法介紹與建模流程：
+撰寫 DEA 各種模型的算法與建模流程的文章，目前已包含以下模型：
 
-* CRS(constant return to scale; input-oriented) ：固定規模報酬
+* CRS(constant return to scale; input-oriented) ：固定規模報酬的模型
 
-* VRS(variable return to scale; input-oriented) ：變動規模報酬
+* VRS(variable return to scale; input-oriented) ：變動規模報酬的模型
 
 * Network DEA：探討系統內部各階段的效率值
 
-完整介紹及流程請參考以下文章：
+完整文章內容請參考以下連結：
 
 |更新時間|文章|
 |---|:--:|
@@ -28,7 +33,12 @@
 |2018-01-30|[Network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
 
 
+--------
+
 ## DEA 擴充函式(持續更新中)
+
+將 DEA 複雜的建模流程包裝成擴充函式，以便迅速針對問題進行建模分析。
+
 
 
 |更新時間|文章|
@@ -38,6 +48,8 @@
 |2018-03-23|[Basic DEA functions](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md)|
 |2018-03-23|[Read data function for network DEA](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md)|
 |2018-03-23|[Network DEA function](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md)|
+
+
 --------
 
 
