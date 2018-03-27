@@ -10,15 +10,15 @@
 * 開發擴充函式以便進行 DEA 的迅速建模。
 
 
-
-#### § DEA Models
+## DEA 建模流程介紹
 |更新時間|文章|
 |---|---|
 |2018-01-29|[CRS Model](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS%20model.md)|
 |2018-02-05|[VRS Model](https://github.com/wurmen/DEA/blob/master/VAS_Model/VRS%20model.md)|
 |2018-01-30|[Network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
 
-#### § DEA Models Functions
+
+## DEA 函式(迅速建模)
 |更新時間|文章|
 |---|---|
 |2018-03-23|[DEA Functions Instructions](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md)|
@@ -27,8 +27,11 @@
 |2018-03-23|[Read data function for network DEA](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md)|
 |2018-03-23|[Network DEA function](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md)|
 --------
-### 參考資源(Python-Gurobi)
-若對python-gurobi的建模較不熟悉，可參考下面資源~
+
+
+## 額外資源 (Python-Gurobi)
+若對[Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface)的建模較不熟悉，可參考我先前寫的介紹資源：
+
 - [環境安裝教學](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md)
 - [Python+Gurobi基本架構](https://github.com/wurmen/Gurobi-Python/blob/master/python-gurobi%20%20model/Python+Gurobi%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B.md)<br>
 - [Python+Gurobi建模](https://github.com/wurmen/Gurobi-Python/blob/master/python-gurobi%20%20model/Python+Gurobi%E5%BB%BA%E6%A8%A1.md)<br>
