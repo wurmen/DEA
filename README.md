@@ -51,12 +51,12 @@
 完整文章內容請參考以下連結(持續更新中)：
 
 |更新時間|文章|連結|
-|---|:---:|:---:|
+|---|---|---|
 |2018-03-23|00. DEA Functions Instructions|[Article](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md) / Notebook / Data|
-|2018-03-23|01. Read data functions for basic DEA models|[Article](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md) / Notebook / Data|
-|2018-03-23|02. Basic DEA functions|[Article](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md) / Notebook / Data|
-|2018-03-23|03. Read data function for network DEA|[Article](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md) / Notebook / Data|
-|2018-03-23|04. Network DEA function|[Article](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md) / Notebook / Data|
+|2018-03-23|Read data functions for basic DEA models(CRS, VRS)|[Article](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md) / Notebook / Data|
+|2018-03-23|Basic DEA models(CRS, VRS)|[Article](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md) / Notebook / Data|
+|2018-03-23|Read data functions for network DEA|[Article](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md) / Notebook / Data|
+|2018-03-23|Network DEA model|[Article](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md) / Notebook / Data|
 
 
 --------
