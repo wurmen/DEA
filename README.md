@@ -20,9 +20,9 @@
 
 --------
 
-## <h2 id='DEA_model'>DEA 建模流程介紹 </h2>
+<h2 id='DEA_model'>DEA 建模流程介紹 </h2>
 
-撰寫 DEA 各種模型的算法與建模流程的文章，目前已包含以下模型：
+撰寫 DEA 各種模型的算法與建模流程的文章，目前包含以下模型：
 
 * CRS(constant return to scale; input-oriented) ：固定規模報酬的模型
 
@@ -41,7 +41,7 @@
 
 --------
 
-## <h2 id='DEA_function'>DEA 擴充函式 </h2>
+<h2 id='DEA_function'>DEA 擴充函式 </h2>
 
 將 DEA 複雜的建模流程包裝成擴充函式，方便迅速針對問題進行建模與分析。
 
