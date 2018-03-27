@@ -6,7 +6,7 @@
 
 * 使用 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 進行線性規劃(Linear Programming)的求解，
 
-* 開發擴充函式以便進行 DEA 的迅速建模。[點我](#DEA_function)
+* 開發擴充函式以便進行 DEA 的迅速建模，[點我](#DEA_function)
 
 --------
 
