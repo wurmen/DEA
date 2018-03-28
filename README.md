@@ -100,7 +100,7 @@
 
 <h2 id='DEA_model_en'>DEA Modeling Introduction </h2>
 
-The articles are about algorithms and modeling process of DEA models, currently including：
+The articles are about algorithms and problems modeling in different DEA models, currently including：
 
 * CRS(input-oriented) ：constant return to scale
 
