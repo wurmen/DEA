@@ -78,11 +78,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-* The most complete and clear introduction for DEA algorithms and modeling [:door:](#DEA_model_en)
+* The most complete and clear introduction for DEA algorithms and modeling. [:door:](#DEA_model_en)
 
-* Solve DEA problems with linear programming techniques by [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface)
+* Solve DEA problems with linear programming techniques by [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface).
 
-* Develop functions for easy and quick DEA modeling [:door:](#DEA_function_en)
+* Develop pre-defined functions for easy and quick DEA problems modeling. [:door:](#DEA_function_en)
 
 * All documentation is written in Chinese.
 
@@ -100,13 +100,13 @@
 
 <h2 id='DEA_model_en'>DEA Modeling Introduction </h2>
 
-The articles are about DEA models' algorithms and modeling process, including：
+The articles are about algorithms and modeling process of DEA models, currently including：
 
-* CRS(constant return to scale; input-oriented) ：固定規模報酬的模型
+* CRS(input-oriented) ：constant return to scale
 
-* VRS(variable return to scale; input-oriented) ：變動規模報酬的模型
+* VRS(input-oriented) ：variable return to scale
 
-* Network DEA：探討系統內部各階段的效率值
+* Network DEA
 
 Please refer to the links below for full content (updating)：
 
@@ -121,9 +121,9 @@ Please refer to the links below for full content (updating)：
 
 <h2 id='DEA_function_en'>DEA Functions </h2>
 
-將 DEA 複雜的建模流程包裝成擴充函式，方便迅速針對問題進行建模與分析。
+The (pre-defined) DEA functions aer for easy and quick DEA problems modeling.
 
-After downloading the corresponding **Repo**, which includes **the source codes**, **data(.csv)** and **Jupyter Notebook examples**, you can learn how to use those function from the corresponding **Documentation**.
+Learn how to use those DEA functions from the corresponding **Documentation** after downloading the corresponding **Repo**(including source codes, data(.csv) and Jupyter Notebook examples).
 
 Please refer to the complete materials below (updating):
 
@@ -139,8 +139,8 @@ Please refer to the complete materials below (updating):
 --------
 
 
-## Python-Gurobi Tutorial
-If you are not familiar with [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) modeling, please refer to the materials in [Gurobi-Python Repo](https://github.com/wurmen/Gurobi-Python) or realtive articles below：
+## Python-Gurobi Tutorial(in Chinese)
+If you are not familiar with [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) modeling, please refer to the materials in [Gurobi-Python Repo](https://github.com/wurmen/Gurobi-Python) or realtive articles below:
 
 - [環境安裝教學](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md)
 - [Python+Gurobi基本架構](https://github.com/wurmen/Gurobi-Python/blob/master/python-gurobi%20%20model/Python+Gurobi%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B.md)<br>
