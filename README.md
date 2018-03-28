@@ -46,17 +46,17 @@
 
 將 DEA 複雜的建模流程包裝成擴充函式，方便迅速針對問題進行建模與分析。
 
-下載對應的 Repo ，裡面包含擴充函式原始碼、資料(.csv)、以及範例(Jupyter Notebook Example)，再根據說明文章(Documentation)來操作。
+下載對應的 Sub-folder ，裡面包含擴充函式原始碼、資料(.csv)、以及範例(Jupyter Notebook Example)，再根據說明文章(Documentation)來操作。
 
 完整資源請參考以下連結(持續更新中)：
 
 |更新時間|主題|連結|
 |---|---|---|
-|2018-03-23|DEA Functions Instructions|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md) / Example / Repo|
-|2018-03-23|Read data functions for basic DEA models(CRS, VRS)|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb) / [Repo](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
-|2018-03-23|Basic DEA models(CRS, VRS)|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/basic_DEA_function.ipynb) / [Repo](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
-|2018-03-23|Read data functions for network DEA|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Read_data_for_network_DEA_function%20example.ipynb) / [Repo](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
-|2018-03-23|Network DEA model|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Network_DEA_function_example.ipynb) / [Repo](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
+|2018-03-23|DEA Functions Instructions|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md) / Example / Sub-folder|
+|2018-03-23|Read data functions for basic DEA models(CRS, VRS)|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
+|2018-03-23|Basic DEA models(CRS, VRS)|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/basic_DEA_function.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
+|2018-03-23|Read data functions for network DEA|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Read_data_for_network_DEA_function%20example.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
+|2018-03-23|Network DEA model|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Network_DEA_function_example.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
 
 
 --------
@@ -123,17 +123,17 @@ Please refer to the links below for full content (updating)：
 
 The (pre-defined) DEA functions are for easy and quick DEA problems modeling.
 
-Learn how to use those DEA functions from the corresponding **Documentation** and **Example**, after downloading the corresponding **Repo** which includes *source codes*, *data(.csv)* and *Jupyter Notebook examples*.
+Learn how to use those DEA functions from the corresponding **Documentation** and **Example**, after downloading the corresponding **Sub-folder** which includes *source codes*, *data(.csv)* and *Jupyter Notebook examples*.
 
 Please refer to the complete materials below (updating):
 
 |Updating Time|Topic|Links|
 |---|---|---|
-|2018-03-23|DEA Functions Instructions|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md) / Example / Repo|
-|2018-03-23|Read data functions for basic DEA models(CRS, VRS)|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb) / [Repo](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
-|2018-03-23|Basic DEA models(CRS, VRS)|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/basic_DEA_function.ipynb) / [Repo](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
-|2018-03-23|Read data functions for network DEA|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Read_data_for_network_DEA_function%20example.ipynb) / [Repo](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
-|2018-03-23|Network DEA model|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Network_DEA_function_example.ipynb) / [Repo](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
+|2018-03-23|DEA Functions Instructions|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md) / Example / Sub-folder|
+|2018-03-23|Read data functions for basic DEA models(CRS, VRS)|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
+|2018-03-23|Basic DEA models(CRS, VRS)|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/basic_DEA_function.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
+|2018-03-23|Read data functions for network DEA|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Read_data_for_network_DEA_function%20example.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
+|2018-03-23|Network DEA model|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Network_DEA_function_example.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
 
 
 --------
