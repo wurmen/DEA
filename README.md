@@ -46,7 +46,7 @@
 
 將 DEA 複雜的建模流程包裝成擴充函式，方便迅速針對問題進行建模與分析。
 
-下載對應的 Sub-folder ，裡面包含擴充函式原始碼、資料(.csv)、以及範例(Jupyter Notebook Example)，再根據說明文章(Documentation)來操作。
+根據不同的主題，移動/下載對應的 Sub-folder (裡面包含擴充函式原始碼、資料(.csv)、以及範例(Jupyter Notebook Example))，便可以根據說明文章(Documentation)來學習操作。
 
 完整資源請參考以下連結(持續更新中)：
 
@@ -123,7 +123,7 @@ Please refer to the links below for full content (updating)：
 
 The (pre-defined) DEA functions are for easy and quick DEA problems modeling.
 
-Learn how to use those DEA functions from the corresponding **Documentation** and **Example**, after downloading the corresponding **Sub-folder** which includes *source codes*, *data(.csv)* and *Jupyter Notebook examples*.
+Learn how to use those DEA functions from the corresponding **Documentation** and **Example**, after downloading/moving to the corresponding **Sub-folder** which includes *source codes*, *data(.csv)* and *Jupyter Notebook examples*.
 
 Please refer to the complete materials below (updating):
 
