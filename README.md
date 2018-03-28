@@ -3,7 +3,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 * 最清楚完整的資料包絡分析(Data Envelopment Analysis, DEA)演算法及建模介紹。 [:door:](#DEA_model)
- 
 
 * 使用 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 進行線性規劃(Linear Programming)的求解。
 
@@ -70,8 +69,6 @@
 - [Python+Gurobi建模](https://github.com/wurmen/Gurobi-Python/blob/master/python-gurobi%20%20model/Python+Gurobi%E5%BB%BA%E6%A8%A1.md)<br>
 - [Python+Gurobi特殊資料結構](https://github.com/wurmen/Gurobi-Python/blob/master/python-gurobi%20%20model/Python%2BGurobi%E7%89%B9%E6%AE%8A%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B.ipynb)
 
-
-
 --------
 
 # Data-Envelopment-Analysis 
@@ -135,9 +132,7 @@ Please refer to the complete materials below (updating):
 |2018-03-23|Read data functions for network DEA|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Read_data_for_network_DEA_function%20example.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
 |2018-03-23|Network DEA model|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Network_DEA_function_example.ipynb) / [Sub-folder](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
 
-
 --------
-
 
 ## Python-Gurobi Tutorial(in Chinese)
 If you are not familiar with [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) modeling, please refer to the materials in [Gurobi-Python Repo](https://github.com/wurmen/Gurobi-Python) or realtive articles below:
