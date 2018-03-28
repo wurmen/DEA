@@ -2,12 +2,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-* 最清楚完整的資料包絡分析(Data Envelopment Analysis, DEA)建模流程介紹 [:door:](#DEA_model)
+* 最清楚完整的資料包絡分析(Data Envelopment Analysis, DEA)演算法及建模介紹。 [:door:](#DEA_model)
  
 
-* 使用 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 進行線性規劃(Linear Programming)的求解
+* 使用 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 進行線性規劃(Linear Programming)的求解。
 
-* 開發擴充函式，方便針對問題進行 DEA 的迅速建模 [:door:](#DEA_function)
+* 開發擴充函式，方便針對問題進行 DEA 的迅速建模。 [:door:](#DEA_function)
 (Development of functions for easy and quick DEA modeling)
 --------
 
@@ -21,7 +21,7 @@
 
 --------
 
-<h2 id='DEA_model'>DEA 建模流程介紹 </h2>
+<h2 id='DEA_model'>DEA 建模介紹 </h2>
 
 撰寫 DEA 各種模型的算法與建模流程的文章，目前包含以下模型：
 
@@ -121,9 +121,9 @@ Please refer to the links below for full content (updating)：
 
 <h2 id='DEA_function_en'>DEA Functions </h2>
 
-The (pre-defined) DEA functions aer for easy and quick DEA problems modeling.
+The (pre-defined) DEA functions are for easy and quick DEA problems modeling.
 
-Learn how to use those DEA functions from the corresponding **Documentation** after downloading the corresponding **Repo**, including *source codes*, *data(.csv)* and *Jupyter Notebook examples*.
+Learn how to use those DEA functions from the corresponding **Documentation** and **Example**, after downloading the corresponding **Repo** which includes *source codes*, *data(.csv)* and *Jupyter Notebook examples*.
 
 Please refer to the complete materials below (updating):
 
