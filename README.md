@@ -123,7 +123,7 @@ Please refer to the links below for full content (updating)：
 
 The (pre-defined) DEA functions aer for easy and quick DEA problems modeling.
 
-Learn how to use those DEA functions from the corresponding **Documentation** after downloading the corresponding **Repo**(including source codes, data(.csv) and Jupyter Notebook examples).
+Learn how to use those DEA functions from the corresponding **Documentation** after downloading the corresponding **Repo**, including *source codes*, *data(.csv)* and *Jupyter Notebook examples*.
 
 Please refer to the complete materials below (updating):
 
