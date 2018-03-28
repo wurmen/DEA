@@ -14,7 +14,7 @@
 
 * Python 3.6
 
-* gurobipy 6.5.2 ([Gurobi Python interface安裝教學](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md))
+* gurobipy 6.5.2 ([Gurobi Python interface 安裝](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md))
 
 * itertools
 
@@ -45,10 +45,7 @@
 
 將 DEA 複雜的建模流程包裝成擴充函式，方便迅速針對問題進行建模與分析。
 
-
-
-
-完整文章內容請參考以下連結(持續更新中)：
+說明文件跟 Jupyter Notebook Example 請參考以下連結(持續更新中)：
 
 |更新時間|主題|連結|
 |---|---|---|
@@ -63,7 +60,7 @@
 
 
 ## 額外資源 (Python-Gurobi Tutorial)
-若對 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 的建模較不熟悉，可參考我先前寫的教學資源：
+若對 [Gurobi Python interface](http://www.gurobi.com/resources/seminars-and-videos/modeling-with-the-gurobi-python-interface) 的建模較不熟悉，可以參考先前寫的教學資源([Gurobi-Python Repo](https://github.com/wurmen/Gurobi-Python))：
 
 - [環境安裝教學](https://github.com/wurmen/Gurobi-Python/blob/master/Installation/%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8.md)
 - [Python+Gurobi基本架構](https://github.com/wurmen/Gurobi-Python/blob/master/python-gurobi%20%20model/Python+Gurobi%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B.md)<br>
