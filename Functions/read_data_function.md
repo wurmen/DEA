@@ -13,7 +13,6 @@
 * [csv2dict_sep()](#csv2dict_sep()) <br>
 當產出與投入資料放於不同檔案(.csv )時使用。
 
-※函式執行結果可參考[這裡](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb)
 
 ## <h2 id="csv2dict()">csv2dict()</h2>
 ### § Description
