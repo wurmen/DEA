@@ -93,7 +93,6 @@ def network(DMU,X,Y,Z_input,Z_output,p_n,var_lb):
         m.setObjective(quicksum(u[r,j]*Y[r][0][j] for j in range(O))+quicksum(w[r,g]*Z_output[r][0][g] for g in range(G)),GRB.MAXIMIZE)
         
         m.addConstr(quicksum(v[r,i]*X[r][0][i] for i in range(I))==1)
-        m.addConstr(quicksum(u[r,j]*Y[r][0][j] for j in range(O))-quicksum(v[r,i]*X[r][0][i] for i in range(I))<=0)    
         for k in DMU:
             for p in range(p_n):
                 P[r,k,p]=m.addConstr((quicksum(u[r,j]*Y[k][p+1][j] for j in range(O))+quicksum(w[r,g]*Z_output[k][p+1][g] for g in range(G)))-
