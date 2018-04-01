@@ -1,8 +1,12 @@
 # Data-Envelopment-Analysis
 
-### 內容概述
 在此主要透過一些範例來說明如何利用Python-Gurobi來建構資料包絡分析模組(Data-Envelopment-Analysis, DEA)
 
+### Requirements
+- python 3.6
+
+- gurobipy 6.5.2 以上版本
+-----------------
 #### § DEA Models
 此區文章主要針對以下DEA模型進行簡介，並說明Python-Gurobi的建構流程：
 
