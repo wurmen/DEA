@@ -4,20 +4,32 @@
 在此主要透過一些範例來說明如何利用Python-Gurobi來建構資料包絡分析模組(Data-Envelopment-Analysis, DEA)
 
 #### § DEA Models
+此區文章主要針對以下DEA模型進行簡介，並說明Python-Gurobi的建構流程：
+
+- CRS(constant return to scale; input-oriented) ：固定規模報酬投入導向模型
+
+- VRS(variable return to scale; input-oriented) ：變東規模報酬投入導向模型
+
+- Relational network DEA Model ：關聯網絡DEA模型
+
 |更新時間|文章|
 |---|---|
 |2018-01-29|[CRS Model](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS%20model.md)|
 |2018-02-05|[VRS Model](https://github.com/wurmen/DEA/blob/master/VAS_Model/VRS%20model.md)|
-|2018-01-30|[Network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
-
+|2018-01-30|[Relational network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
+---------------
 #### § DEA Models Functions
-|更新時間|文章|
-|---|---|
-|2018-03-23|[DEA Functions Instructions](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md)|
-|2018-03-23|[Read data functions for basic DEA models](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md)|
-|2018-03-23|[Basic DEA functions](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md)|
-|2018-03-23|[Read data function for network DEA](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md)|
-|2018-03-23|[Network DEA function](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md)|
+針對上述DEA模型建構幾個簡單的DEA擴充函數，讓使用者能夠更輕鬆的利用這些DEA函數來進行效率分析，或者可由這些已建好的函數去做延伸。<br>
+
+以下連結分別對應到每個主題的說明文章、範例文章、程式碼以及檔案資料夾(內部包含該主題的所有資源)，可根據說明文章自行下載操作學習。
+
+|更新時間|文章|連結|
+|---|---|---|
+|2018-03-23|DEA Functions Instructions|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/user's%20guide.md)|
+|2018-03-23|Read data functions for basic DEA models|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/read_data_example.ipynb) / [Code](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/DEA.py) / [Folder](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
+|2018-03-23|Basic DEA functions|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/basic_dea_functions.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/basic_DEA_function.ipynb) / [Code](https://github.com/wurmen/DEA/blob/master/Functions/basic_DEA_data%26code/DEA.py) / [Folder](https://github.com/wurmen/DEA/tree/master/Functions/basic_DEA_data%26code)|
+|2018-03-23|Read data function for network DEA|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/read_data_for_networkDEA.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Read_data_for_network_DEA_function%20example.ipynb) / [Code](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/network_function.py) / [Folder](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
+|2018-03-23|Relational network DEA function|[Documentation](https://github.com/wurmen/DEA/blob/master/Functions/network_DEA_function.md) / [Example](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/Network_DEA_function_example.ipynb) / [Code](https://github.com/wurmen/DEA/blob/master/Functions/network_data%26code/network_function.py) / [Folder](https://github.com/wurmen/DEA/tree/master/Functions/network_data%26code)|
 --------
 ### 參考資源(Python-Gurobi)
 若對python-gurobi的建模較不熟悉，可參考下面資源~
