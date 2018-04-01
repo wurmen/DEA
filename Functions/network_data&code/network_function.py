@@ -101,14 +101,25 @@ def network(DMU,X,Y,Z_input,Z_output,p_n,var_lb):
        
         m.optimize()
         
-        E[r]=m.objVal
-        print("The efficiency of DMU %s:%0.3f"%(r,E[r]))
-                
-#        for w in m.getVars():
-#            print('the weight of DMU %s :(%s=%0.20f)'%(r,w.varName,w.X))
 
-        for p in range(p_n):
-            P_efficiency[r,p]=((sum(u[r,j].x*Y[r][p+1][j] for j in range(O))+sum(w[r,g].x*Z_output[r][p+1][g] for g in range(G)))/
-                        (sum(v[r,i].x*X[r][p+1][i] for i in range(I)) + sum(w[r,g].x*Z_input[r][p+1][g] for g in range(G))))
-            print('The efficiency and inefficiency of Process %s for DMU %s:%0.4f and %0.4g'%(p,r,P_efficiency[r,p],P[r,r,p].slack))
+        if m.status==GRB.OPTIMAL:
+            E[r]=m.objVal
+            print("The efficiency of DMU %s:%0.3f"%(r,E[r]))
+            for p in range(p_n):
+                denominator=sum(v[r,i].x*X[r][p+1][i] for i in range(I)) + sum(w[r,g].x*Z_input[r][p+1][g] for g in range(G))
+                if denominator!=0:                
+                    P_efficiency[r,p]=((sum(u[r,j].x*Y[r][p+1][j] for j in range(O))+sum(w[r,g].x*Z_output[r][p+1][g] for g in range(G)))/
+                                (sum(v[r,i].x*X[r][p+1][i] for i in range(I)) + sum(w[r,g].x*Z_input[r][p+1][g] for g in range(G))))
+                    print('The efficiency and inefficiency of Process %s for DMU %s:%0.4f and %0.4g'%(p,r,P_efficiency[r,p],P[r,r,p].slack))
+                else:
+                    print('The efficiency of Process %s for DMU %s can\'t be calculated, probably because the process is calculated with a denominator of 0'%(p,r))
+
+        else:
+            print('The model status of the DMU %s is %d. \n you can confirm what the value means on the website(http://www.gurobi.com/documentation/7.5/refman/status.html)'%(r,m.status))
+
+        
+                
+#        for c in m.getVars():
+#            print('the weight of DMU %s :(%s=%0.20f)'%(r,c.varName,c.X))
+
     #return E
