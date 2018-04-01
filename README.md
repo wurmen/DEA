@@ -3,6 +3,7 @@
 在此主要透過一些範例來說明如何利用Python-Gurobi來建構資料包絡分析模組(Data-Envelopment-Analysis, DEA)
 
 ### Requirements
+
 - python 3.6
 
 - gurobipy 6.5.2 以上版本
