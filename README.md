@@ -22,7 +22,7 @@
 |2018-01-29|[CRS Model](https://github.com/wurmen/DEA/blob/master/CRS_Model/CRS%20model.md)|
 |2018-02-05|[VRS Model](https://github.com/wurmen/DEA/blob/master/VAS_Model/VRS%20model.md)|
 |2018-01-30|[Relational network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
----------------
+
 #### § DEA Models Functions
 針對上述DEA模型建構幾個簡單的DEA擴充函數，讓使用者能夠更輕鬆的利用這些DEA函數來進行效率分析，或者可由這些已建好的函數去做延伸。<br>
 
