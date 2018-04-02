@@ -2,13 +2,13 @@
 
 在此主要透過一些範例來說明如何利用Python-Gurobi來建構資料包絡分析模組(Data-Envelopment-Analysis, DEA)
 
-### § Requirements
+### Requirements
 
 - python 3.6
 
 - gurobipy 6.5.2 以上版本
 
-### § DEA Models
+### DEA Models
 此區文章主要針對以下DEA模型進行簡介，並說明Python-Gurobi的建模流程：
 
 - CRS(constant return to scale; input-oriented) ：固定規模報酬投入導向模型
@@ -23,7 +23,7 @@
 |2018-02-05|[VRS Model](https://github.com/wurmen/DEA/blob/master/VAS_Model/VRS%20model.md)|
 |2018-01-30|[Relational network DEA Model](https://github.com/wurmen/DEA/blob/master/Network_DEA/network_dea.md)|
 
-### § DEA Models Functions
+### DEA Models Functions
 針對上述DEA模型建構幾個簡單的DEA擴充函數，讓使用者能夠更輕鬆的利用這些DEA函數來進行效率分析，或者可由這些已建好的函數去做延伸。<br>
 
 以下連結分別對應到每個主題的說明文章、範例文章、程式碼以及檔案資料夾(內部包含該主題的所有資源)，可根據說明文章自行下載操作學習。
