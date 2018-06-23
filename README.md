@@ -14,7 +14,7 @@
 
 - CRS(constant return to scale; input-oriented) ：固定規模報酬投入導向模型
 
-- VRS(variable return to scale; input-oriented) ：變東規模報酬投入導向模型
+- VRS(variable return to scale; input-oriented) ：變動規模報酬投入導向模型
 
 - Relational network DEA Model ：關聯網絡DEA模型
 
